@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Estrutura de Repetição</h1>
+    <h2>Explicação de Estrutura de Repetição</h2>
+    <hr>
+    <blockquote>
+        <p>O módulo "Estruturas de repetição" do Python, fala sobre a situação de ter que repetir a mesma linha de comando 2, 3, ou mais, e para facilitar essas questões, usamso os comandos: 
+    <blockquote> 
+        <li>For - usado para iterar sobre uma sequência (como uma lista, tupla, dicionário, conjunto ou string) e executar um bloco de código para cada item da sequência. Ele é útil quando sabemos o número de iterações que queremos realizar.
+        <li>While - usado para repetir um bloco de código enquanto uma condição for verdadeira. Ele é útil quando não sabemos o número de iterações que queremos realizar.
+    <ul>
+    </blockquote>
+        Esses comandos não só deixam o trabalho mais eficiente, mas também permitem automatizar tarefas repetitivas de forma mais elegante e limpa.</p>
+</blockquote>    
+<details>
+    <summary>Exemplo de Estrutura de Repetição - For</summary>
+    <blockquote>
+    <p>Segue abaixo um código em python para ser usado de exemplo de estrutura de repetição usando for:</p>
+    </blockquote>
+    <blockquote>
+    <p><pre><code>
+        # Importanto a biblioteca "time" para usar a função sleep, que faz o programa esperar um tempo determinado antes de continuar a execução.
+        import time
+
+        # Usando um loop for para iterar sobre uma sequência de números de 0 a 54 (55 não incluso).
+        for num in range (55):
+
+        # A função sleep faz o programa esperar 0.2 segundos antes de continuar a execução.
+            time.sleep(0.2)
+        # Imprimindo o número atual da iteração.
+            print("este é o numero", num);
+    </code></pre><p>
+    </blockquote>
+</details>
+<details>
+    <summary>Exemplo de Estrutura de Repetição - While</summary>
+    <blockquote>
+    <p>Segue abaixo um código em python para ser usado de exemplo de estrutura de repetição usando while:</p>
+    </blockquote>
+    <blockquote>
+    <p><pre><code>
+        # Importanto a biblioteca "time" para usar a função sleep, que faz o programa esperar um tempo determinado antes de continuar a execução.
+        import time
+
+        # Inicializando a variável A com o valor 0.
+        A = 0
+
+        # Usando um loop while para repetir o bloco de código enquanto a condição A <= 100 for verdadeira.
+        while A <= 100:
+
+        # A função sleep faz o programa esperar 0.2 segundos antes de continuar a execução.
+        time.sleep(0.2)
+
+        # Imprimindo o valor atual de A.
+        print(A)
+
+        # Incrementando o valor de A em 1 a cada iteração.
+        A += 1
+    </code></pre><p>
+    </blockquote>
+</details>
+</body>
+</html>
