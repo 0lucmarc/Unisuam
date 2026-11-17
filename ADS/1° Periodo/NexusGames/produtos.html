@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Produtos | SPAN Games</title>
+
+
+    <!-- ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+
+    <!-- =========================================
+         PÁGINA DE PRODUTOS
+    ========================================== -->
+
+    <main class="pagina-produtos">
+
+
+        <h1>
+            Todos os Produtos
+        </h1>
+
+
+        <p class="subtitulo">
+            Encontre os melhores produtos para o seu setup gamer.
+        </p>
+
+
+
+        <!-- =====================================
+             FILTROS
+        ====================================== -->
+
+        <section class="filtros">
+
+            <button
+                type="button"
+                data-categoria="todos"
+            >
+                Todos
+            </button>
+
+
+            <button
+                type="button"
+                data-categoria="1"
+            >
+                Mouses
+            </button>
+
+
+            <button
+                type="button"
+                data-categoria="2"
+            >
+                Monitores
+            </button>
+
+
+            <button
+                type="button"
+                data-categoria="3"
+            >
+                Fones
+            </button>
+
+
+            <button
+                type="button"
+                data-categoria="4"
+            >
+                Teclados
+            </button>
+
+
+            <button
+                type="button"
+                data-categoria="5"
+            >
+                Controles
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FILTRO ATUAL
+        ====================================== -->
+
+        <div class="filtro-atual">
+
+            Mostrando:
+
+            <strong>
+                Todos os produtos
+            </strong>
+
+        </div>
+
+
+
+        <!-- =====================================
+             LISTA DE PRODUTOS
+        ====================================== -->
+
+        <section
+            id="listaProdutos"
+            class="lista-produtos"
+        >
+
+            <!--
+                Os produtos serão inseridos
+                pelo produtospagina.js
+            -->
+
+        </section>
+
+
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-coluna">
+
+                <h2>SPAN GAMES</h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="ofertas.html">Ofertas</a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="ajuda.html">Central de ajuda</a>
+                <a href="ajuda.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+
+    <!-- HEADER -->
+    <script src="js/header.js"></script>
+
+
+    <!-- DADOS DOS PRODUTOS -->
+    <script src="js/dadosprodutos.js"></script>
+
+
+    <!-- CARRINHO -->
+    <script src="js/carrinho.js"></script>
+
+
+    <!-- PÁGINA DE PRODUTOS -->
+    <script src="js/produtospagina.js"></script>
+
+
+</body>
+
+</html>

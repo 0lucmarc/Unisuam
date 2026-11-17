@@ -1,0 +1,628 @@
+/* ==================================================
+   1. BARRA DE ACESSIBILIDADE
+   ================================================== */
+
+.barra-acessibilidade {
+    width: 100%;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0b0c12;
+    border-bottom: 1px solid #1c1d28;
+
+    box-sizing: border-box;
+}
+
+.acessibilidade-central {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+.acessibilidade-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.acessibilidade-grupo span {
+    margin-right: 2px;
+
+    color: #8b5cf6;
+
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.acessibilidade-separador {
+    width: 1px;
+    height: 14px;
+
+    background-color: #34313f;
+}
+
+
+/* ==================================================
+   2. BOTÕES DE ACESSIBILIDADE
+   ================================================== */
+
+.acessibilidade-grupo button {
+    min-width: 24px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0 5px;
+
+    border: 1px solid #302d3b;
+    border-radius: 4px;
+
+    background-color: #181923;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.625rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.acessibilidade-grupo button:hover {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+
+    color: #ffffff;
+}
+
+.acessibilidade-grupo button:focus-visible {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
+}
+
+
+/* ==================================================
+   3. TEMA CLARO - ESTRUTURA GERAL
+   ================================================== */
+
+body.tema-claro {
+    background-color: #f5f5f7;
+    color: #111111;
+}
+
+body.tema-claro main,
+body.tema-claro .sobre-page,
+body.tema-claro .pagina-cadastro-produto,
+body.tema-claro .pagina-carrinho {
+    background-color: #f5f5f7;
+    color: #111111;
+}
+
+
+/* HEADER */
+
+body.tema-claro header {
+    background-color: #ffffff;
+    border-bottom-color: #dddddd;
+}
+
+body.tema-claro .logo {
+    color: #111111;
+}
+
+body.tema-claro .logo span {
+    color: #8b5cf6;
+}
+
+body.tema-claro .menu a {
+    color: #333333;
+}
+
+body.tema-claro .menu a:hover {
+    color: #8b5cf6;
+}
+
+body.tema-claro .carrinho,
+body.tema-claro .login {
+    color: #111111;
+}
+
+
+/* PESQUISA */
+
+body.tema-claro .pesquisa {
+    background-color: #eeeeee;
+}
+
+body.tema-claro .pesquisa input {
+    background-color: transparent;
+    color: #111111;
+}
+
+body.tema-claro .pesquisa input::placeholder {
+    color: #777777;
+}
+
+body.tema-claro .pesquisa i {
+    color: #333333;
+}
+
+
+/* TEXTOS */
+
+body.tema-claro h1,
+body.tema-claro h2,
+body.tema-claro h3,
+body.tema-claro h4,
+body.tema-claro h5,
+body.tema-claro h6 {
+    color: #111111;
+}
+
+body.tema-claro p {
+    color: #444444;
+}
+
+
+/* ==================================================
+   4. TEMA CLARO - CARDS
+   ================================================== */
+
+body.tema-claro .card,
+body.tema-claro .produto-card,
+body.tema-claro .sobre-card,
+body.tema-claro .formulario-produto,
+body.tema-claro .item-carrinho,
+body.tema-claro .resumo-carrinho,
+body.tema-claro .carrinho-vazio {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #dddddd;
+}
+
+
+/* Cards que recebem sombra */
+
+body.tema-claro .formulario-produto {
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+body.tema-claro .item-carrinho,
+body.tema-claro .resumo-carrinho,
+body.tema-claro .carrinho-vazio {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* SOBRE */
+
+body.tema-claro .sobre-card {
+    border: 1px solid #dddddd;
+    color: #222222;
+}
+
+body.tema-claro .sobre-card p {
+    color: #444444;
+}
+
+body.tema-claro .sobre-card .mapa {
+    border: 1px solid #dddddd;
+}
+
+
+/* ==================================================
+   5. TEMA CLARO - PRODUTOS
+   ================================================== */
+
+body.tema-claro .filtros button,
+body.tema-claro .categorias button {
+    background-color: #ffffff;
+    color: #222222;
+
+    border-color: #dddddd;
+}
+
+
+/* ==================================================
+   6. TEMA CLARO - CADASTRO DE PRODUTOS
+   ================================================== */
+
+body.tema-claro .campos-produto input,
+body.tema-claro .campos-produto textarea,
+body.tema-claro .campos-produto select {
+    background-color: #f4f4f7;
+    color: #222222;
+
+    border: 1px solid #dddddd;
+}
+
+body.tema-claro .campos-produto input::placeholder,
+body.tema-claro .campos-produto textarea::placeholder {
+    color: #777777;
+}
+
+body.tema-claro .campos-produto input:focus,
+body.tema-claro .campos-produto textarea:focus,
+body.tema-claro .campos-produto select:focus {
+    border-color: #8b5cf6;
+
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.12);
+}
+
+body.tema-claro .opcoes-produto,
+body.tema-claro .opcoes-produto label {
+    color: #333333;
+}
+
+body.tema-claro .area-imagem {
+    background-color: #f4f4f7;
+    color: #666666;
+
+    border: 1px dashed #cccccc;
+}
+
+body.tema-claro .area-imagem:hover {
+    color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+
+/* ==================================================
+   7. TEMA CLARO - CARRINHO
+   ================================================== */
+
+body.tema-claro .avaliacao,
+body.tema-claro .quantidade,
+body.tema-claro .quantidade span,
+body.tema-claro .total-carrinho {
+    color: #111111;
+}
+
+body.tema-claro .avaliacao span,
+body.tema-claro .btn-remover {
+    color: #777777;
+}
+
+body.tema-claro .preco-produto,
+body.tema-claro .total-carrinho strong {
+    color: #8b5cf6;
+}
+
+body.tema-claro .quantidade button {
+    background-color: #eeeeee;
+    color: #111111;
+
+    border: 1px solid #dddddd;
+}
+
+body.tema-claro .quantidade button:hover {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+
+    color: #ffffff;
+}
+
+body.tema-claro .btn-remover:hover {
+    color: #ef4444;
+}
+
+body.tema-claro .linha-resumo {
+    color: #333333;
+}
+
+body.tema-claro .linha-resumo span,
+body.tema-claro .carrinho-vazio p {
+    color: #666666;
+}
+
+body.tema-claro .resumo-carrinho hr {
+    border-top-color: #dddddd;
+}
+
+
+/* ==================================================
+   8. BOTÕES ROXOS
+   ================================================== */
+
+body.tema-claro .btn-salvar,
+body.tema-claro .btn-finalizar,
+body.tema-claro .carrinho-vazio a {
+    background-color: #7c3aed;
+    color: #ffffff;
+}
+
+body.tema-claro .btn-salvar:hover,
+body.tema-claro .btn-finalizar:hover {
+    background-color: #9333ea;
+}
+
+
+/* ==================================================
+   9. BARRA DE ACESSIBILIDADE - TEMA CLARO
+   ================================================== */
+
+body.tema-claro .barra-acessibilidade {
+    background-color: #f1f1f3;
+    border-bottom-color: #dddddd;
+}
+
+body.tema-claro .acessibilidade-grupo span {
+    color: #7540d8;
+}
+
+body.tema-claro .acessibilidade-grupo button {
+    background-color: #ffffff;
+    border-color: #d6d6da;
+
+    color: #111111;
+}
+
+body.tema-claro .acessibilidade-grupo button:hover {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   10. TEMA ESCURO
+   ================================================== */
+
+body.tema-escuro {
+    background-color: #08090f;
+    color: #ffffff;
+}
+
+body.tema-escuro main,
+body.tema-escuro .sobre-page,
+body.tema-escuro .pagina-cadastro-produto,
+body.tema-escuro .pagina-carrinho {
+    background-color: #08090f;
+    color: #ffffff;
+}
+
+
+/* HEADER */
+
+body.tema-escuro header {
+    background-color: #11121b;
+    border-bottom-color: #1c1d28;
+}
+
+body.tema-escuro .menu a,
+body.tema-escuro .carrinho,
+body.tema-escuro .login {
+    color: #ffffff;
+}
+
+body.tema-escuro .pesquisa {
+    background-color: #161720;
+}
+
+body.tema-escuro .pesquisa input {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+/* CARDS ESCUROS */
+
+body.tema-escuro .sobre-card {
+    background-color: #15101f;
+    border-color: #292331;
+
+    color: #ffffff;
+}
+
+body.tema-escuro .formulario-produto,
+body.tema-escuro .item-carrinho,
+body.tema-escuro .resumo-carrinho,
+body.tema-escuro .carrinho-vazio {
+    background-color: #11111a;
+    border-color: #242433;
+
+    color: #ffffff;
+}
+
+
+/* TEXTOS */
+
+body.tema-escuro .sobre-card p {
+    color: #b8b5c0;
+}
+
+body.tema-escuro .opcoes-produto,
+body.tema-escuro .opcoes-produto label,
+body.tema-escuro .info-produto h3,
+body.tema-escuro .resumo-carrinho h2,
+body.tema-escuro .quantidade span {
+    color: #ffffff;
+}
+
+
+/* BARRA */
+
+body.tema-escuro .barra-acessibilidade {
+    background-color: #0b0c12;
+    border-bottom-color: #1c1d28;
+}
+
+
+/* ==================================================
+   11. RESPONSIVIDADE DA ACESSIBILIDADE
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .barra-acessibilidade {
+        height: 30px;
+    }
+
+    .acessibilidade-central {
+        gap: 10px;
+    }
+
+    .acessibilidade-grupo {
+        gap: 4px;
+    }
+
+    .acessibilidade-grupo span {
+        font-size: 0.625rem;
+    }
+
+    .acessibilidade-grupo button {
+        min-width: 22px;
+        height: 18px;
+
+        padding: 0 4px;
+
+        font-size: 0.5625rem;
+    }
+}
+/* ==================================================
+   5. TEMA CLARO - PRODUTOS E CATEGORIAS
+   ================================================== */
+
+/* CATEGORIAS */
+
+body.tema-claro .categoria-card {
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+body.tema-claro .categoria-card:hover {
+    background-color: #f4f4f7;
+}
+
+body.tema-claro .categoria-card p {
+    color: #333333;
+}
+
+
+/* PRODUTOS */
+
+body.tema-claro .produto-card {
+    background-color: #ffffff;
+    color: #111111;
+
+    border-color: #dddddd;
+}
+
+body.tema-claro .produto-card h3,
+body.tema-claro .produto-card p {
+    color: #222222;
+}
+
+
+/* FILTROS */
+
+body.tema-claro .filtros button,
+body.tema-claro .categorias button {
+    background-color: #ffffff;
+
+    color: #222222;
+
+    border-color: #dddddd;
+}
+/* ==================================================
+   TEMA CLARO - CADASTRO
+   ================================================== */
+
+body.tema-claro #formCadastro {
+    background-color: #ffffff;
+    color: #111111;
+
+    border: 1px solid #dddddd;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+/* TÍTULO */
+
+body.tema-claro #formCadastro h1 {
+    color: #111111;
+}
+
+
+/* TÍTULOS DAS SEÇÕES */
+
+body.tema-claro #formCadastro section h2 {
+    color: #7c3aed;
+}
+
+
+/* CAMPOS */
+
+body.tema-claro #formCadastro .campo input {
+    background-color: transparent;
+
+    color: #222222;
+
+    border-color: #7c3aed;
+}
+
+
+/* CAMPO SELECIONADO */
+
+body.tema-claro #formCadastro .campo input:focus {
+    border-color: #8b4dff;
+
+    box-shadow:
+        0 0 0 2px rgba(139, 77, 255, 0.12);
+}
+
+
+/* LABEL */
+
+body.tema-claro #formCadastro .campo label {
+    color: #7c3aed;
+}
+
+
+/* LABEL QUANDO SOBE */
+
+body.tema-claro #formCadastro .campo input:focus + label,
+body.tema-claro #formCadastro .campo.campo-preenchido label {
+    background-color: #ffffff;
+
+    color: #7c3aed;
+}
+
+
+/* TERMOS */
+
+body.tema-claro #formCadastro .termos,
+body.tema-claro #formCadastro .termos label {
+    color: #222222;
+}
+
+
+/* VOLTAR */
+
+body.tema-claro #formCadastro .voltar {
+    color: #333333;
+}

@@ -1,0 +1,829 @@
+/* =========================================
+   FEEDBACK - SPAN GAMES
+========================================= */
+
+.pagina-feedback {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: calc(100vh - 120px);
+
+    margin: 0 auto;
+
+    padding: 42px 30px 65px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ÁREA
+========================================= */
+
+.feedback-area {
+    width: 100%;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.feedback-cabecalho {
+    margin-bottom: 22px;
+}
+
+
+.feedback-etiqueta {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #a855f7;
+
+    font-size: 0.5625rem;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+.feedback-cabecalho h1 {
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.feedback-cabecalho p {
+    margin: 0;
+
+    color: #858591;
+
+    font-size: 0.6875rem;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL
+========================================= */
+
+.feedback-card,
+.confirmacao-card {
+    width: 100%;
+
+    padding: 28px 30px;
+
+    background-color: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.18);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PARTE SUPERIOR
+========================================= */
+
+.feedback-colunas,
+.confirmacao-colunas {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1.35fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   DIVISOR
+========================================= */
+
+.feedback-divisor,
+.confirmacao-divisor {
+    width: 1px;
+    height: 100%;
+
+    min-height: 145px;
+
+    background-color: #30303e;
+}
+
+
+/* =========================================
+   TÍTULOS DOS BLOCOS
+========================================= */
+
+.feedback-bloco h2,
+.feedback-avaliacao h2,
+.feedback-gostou h2,
+.confirmacao-bloco h2 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 0.6875rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.opcao-check {
+    width: fit-content;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    color: #e5e5ec;
+
+    font-size: 0.625rem;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+.opcao-check input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* QUADRADO */
+
+.check-personalizado {
+    width: 13px;
+    height: 13px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1px;
+
+    background-color: transparent;
+
+    border: 1px solid #777783;
+    border-radius: 2px;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* CHECK */
+
+.opcao-check
+input:checked +
+.check-personalizado {
+    background-color: #7c3aed;
+
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(124, 58, 237, 0.10);
+}
+
+
+.opcao-check
+input:checked +
+.check-personalizado::after {
+    content: "✓";
+
+    color: #ffffff;
+
+    font-size: 0.5625rem;
+    font-weight: 700;
+}
+
+
+/* HOVER */
+
+.opcao-check:hover
+.check-personalizado {
+    border-color: #a855f7;
+}
+
+
+/* =========================================
+   GRID DOS INTERESSES
+========================================= */
+
+.interesses-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 28px;
+    row-gap: 0;
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.feedback-inferior {
+    display: grid;
+
+    grid-template-columns: 1fr 1.35fr;
+
+    gap: 30px;
+
+    margin-top: 28px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #242433;
+}
+
+
+/* =========================================
+   ESTRELAS
+========================================= */
+
+.estrelas {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.estrela {
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: #555561;
+
+    font-size: 1.375rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color 0.15s,
+        transform 0.15s;
+}
+
+
+.estrela:hover {
+    transform: scale(1.12);
+}
+
+
+/*
+   O JS vai adicionar esta classe
+   nas estrelas selecionadas.
+*/
+
+.estrela.ativa {
+    color: #ffd43b;
+}
+
+
+/* =========================================
+   RADIO
+========================================= */
+
+.feedback-gostou {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.opcao-radio {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 9px;
+
+    color: #e5e5ec;
+
+    font-size: 0.625rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+.opcao-radio input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* CÍRCULO */
+
+.radio-personalizado {
+    width: 14px;
+    height: 14px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #777783;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.opcao-radio:hover
+.radio-personalizado {
+    border-color: #a855f7;
+}
+
+
+.opcao-radio
+input:checked +
+.radio-personalizado {
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(124, 58, 237, 0.10);
+}
+
+
+.opcao-radio
+input:checked +
+.radio-personalizado::after {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    background-color: #a855f7;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   MENSAGEM
+========================================= */
+
+.feedback-mensagem {
+    min-height: 17px;
+
+    margin-top: 16px;
+
+    color: #ef7777;
+
+    font-size: 0.625rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.feedback-acoes {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 7px;
+}
+
+
+.btn-feedback {
+    min-width: 155px;
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 18px;
+
+    background-color: #7c3aed;
+
+    border: none;
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.625rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+
+.btn-feedback:hover {
+    background-color: #9147ff;
+}
+
+
+.btn-feedback:active {
+    transform: scale(0.98);
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secundario {
+    background-color: #6d32d9;
+}
+
+
+.btn-secundario:hover {
+    background-color: #8040e8;
+}
+
+
+/* =========================================
+   TELA DE CONFIRMAÇÃO
+========================================= */
+
+.feedback-confirmacao .feedback-cabecalho {
+    margin-bottom: 20px;
+}
+
+
+.confirmacao-card {
+    min-height: 420px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   ITENS CONFIRMADOS
+========================================= */
+
+.confirmacao-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: #eeeeF3;
+
+    font-size: 0.625rem;
+    font-weight: 500;
+}
+
+
+.confirmacao-item::before {
+    content: "✓";
+
+    color: #ffffff;
+
+    font-size: 0.625rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CONFIRMAÇÃO INFERIOR
+========================================= */
+
+.confirmacao-inferior {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    margin-top: 42px;
+
+    padding-top: 26px;
+
+    border-top: 1px solid #242433;
+}
+
+
+/* O QUE MAIS GOSTOU */
+
+.confirmacao-destaque {
+    width: fit-content;
+
+    min-width: 110px;
+
+    padding: 5px 12px;
+
+    background-color: #171720;
+
+    border: 1px solid #343442;
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 0.5625rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ESTRELAS DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-estrelas {
+    color: #ffd43b;
+
+    font-size: 1.1875rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   AÇÕES DA CONFIRMAÇÃO
+========================================= */
+
+.confirmacao-acoes {
+    display: flex;
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-top: auto;
+
+    padding-top: 55px;
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+body.tema-claro
+.feedback-cabecalho h1 {
+    color: #22222a;
+}
+
+
+body.tema-claro
+.feedback-cabecalho p {
+    color: #666674;
+}
+
+
+body.tema-claro
+.feedback-card,
+
+body.tema-claro
+.confirmacao-card {
+    background-color: #ffffff;
+
+    border-color: #dedee6;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+body.tema-claro
+.feedback-bloco h2,
+
+body.tema-claro
+.feedback-avaliacao h2,
+
+body.tema-claro
+.feedback-gostou h2,
+
+body.tema-claro
+.confirmacao-bloco h2 {
+    color: #292932;
+}
+
+
+body.tema-claro
+.opcao-check,
+
+body.tema-claro
+.opcao-radio {
+    color: #3e3e48;
+}
+
+
+body.tema-claro
+.feedback-divisor,
+
+body.tema-claro
+.confirmacao-divisor,
+
+body.tema-claro
+.feedback-inferior,
+
+body.tema-claro
+.confirmacao-inferior {
+    border-color: #dedee6;
+}
+
+
+body.tema-claro
+.feedback-divisor,
+
+body.tema-claro
+.confirmacao-divisor {
+    background-color: #dedee6;
+}
+
+
+body.tema-claro
+.check-personalizado,
+
+body.tema-claro
+.radio-personalizado {
+    border-color: #9999a5;
+}
+
+
+body.tema-claro
+.confirmacao-item {
+    color: #33333c;
+}
+
+
+body.tema-claro
+.confirmacao-item::before {
+    color: #7c3aed;
+}
+
+
+body.tema-claro
+.confirmacao-destaque {
+    background-color: #f5f3fa;
+
+    border-color: #ded8e8;
+
+    color: #33333c;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .pagina-feedback {
+        padding:
+            35px
+            22px
+            55px;
+    }
+
+
+    .feedback-colunas,
+    .confirmacao-colunas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .feedback-divisor,
+    .confirmacao-divisor {
+        width: 100%;
+        height: 1px;
+
+        min-height: 1px;
+
+        margin: 5px 0;
+    }
+
+
+    .feedback-inferior,
+    .confirmacao-inferior {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .interesses-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .confirmacao-acoes {
+        gap: 12px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .pagina-feedback {
+        padding:
+            28px
+            15px
+            45px;
+    }
+
+
+    .feedback-card,
+    .confirmacao-card {
+        padding:
+            23px
+            20px;
+    }
+
+
+    .feedback-cabecalho h1 {
+        font-size: 1.3125rem;
+    }
+
+
+    .confirmacao-acoes {
+        flex-direction: column;
+
+        padding-top: 35px;
+    }
+
+
+    .btn-feedback {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,59 @@
+
+/* Página de erro de login */
+.erro-login {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Título */
+.erro-login h1 {
+    color: #8b4dff;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+/* Mensagem */
+.erro-login p {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 0 45px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Botão */
+.erro-login .btn {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #8b4dff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.erro-login .btn:hover {
+    background-color: #7135df;
+    transform: scale(1.05);
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    .erro-login h1 {
+        font-size: 40px;
+    }
+
+    .erro-login p {
+        font-size: 17px;
+    }
+}

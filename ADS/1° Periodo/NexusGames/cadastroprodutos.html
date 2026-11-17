@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Produtos | SPAN Games</title>
+
+    <!-- ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastroprodutos.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+
+    <div id="header"></div>
+
+
+    <!-- ================================
+         PÁGINA DE CADASTRO
+    ================================= -->
+
+    <main class="pagina-cadastro-produto">
+
+
+        <!-- ================================
+             FORMULÁRIO
+        ================================= -->
+
+        <section class="formulario-produto">
+
+            <h1>Cadastro de Produtos</h1>
+
+
+            <div class="formulario-conteudo">
+
+
+                <!-- ================================
+                     PARTE ESQUERDA
+                ================================= -->
+
+                <div class="campos-produto">
+
+
+                    <!-- NOME -->
+
+                    <div class="campo-flutuante">
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder=" "
+                        >
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                    </div>
+
+
+                    <!-- DESCRIÇÃO -->
+
+                    <div class="campo-flutuante">
+
+                        <textarea
+                            id="descricao"
+                            placeholder=" "
+                        ></textarea>
+
+                        <label for="descricao">
+                            Descrição
+                        </label>
+
+                    </div>
+
+
+                    <!-- ================================
+                         CATEGORIA E PREÇO
+                    ================================= -->
+
+                    <div class="linha-campos">
+
+
+                        <!-- CATEGORIA -->
+
+                        <div class="campo-flutuante select-flutuante">
+
+                            <select id="categoria">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="1">
+                                    Mouses
+                                </option>
+
+                                <option value="2">
+                                    Monitores
+                                </option>
+
+                                <option value="3">
+                                    Headsets
+                                </option>
+
+                                <option value="4">
+                                    Teclados
+                                </option>
+
+                                <option value="5">
+                                    Controles
+                                </option>
+
+                            </select>
+
+                            <label for="categoria">
+                                Categoria
+                            </label>
+
+                        </div>
+
+
+                        <!-- PREÇO -->
+
+                        <div class="campo-flutuante">
+
+                            <input
+                                type="number"
+                                id="preco"
+                                step="0.01"
+                                min="0"
+                                placeholder=" "
+                            >
+
+                            <label for="preco">
+                                Preço
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================
+                         OFERTA E ESTOQUE
+                    ================================= -->
+
+                    <div class="linha-campos">
+
+
+                        <!-- PREÇO DE OFERTA -->
+
+                        <div class="campo-flutuante">
+
+                            <input
+                                type="number"
+                                id="precoOferta"
+                                step="0.01"
+                                min="0"
+                                placeholder=" "
+                            >
+
+                            <label for="precoOferta">
+                                Preço de Oferta
+                            </label>
+
+                        </div>
+
+
+                        <!-- ESTOQUE -->
+
+                        <div class="campo-flutuante">
+
+                            <input
+                                type="number"
+                                id="estoque"
+                                min="0"
+                                placeholder=" "
+                            >
+
+                            <label for="estoque">
+                                Quantidade de Estoque
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================
+                         OPÇÕES
+                    ================================= -->
+
+                    <div class="opcoes-produto">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="oferta"
+                            >
+
+                            Oferta
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="destaque"
+                            >
+
+                            Destaque
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     IMAGEM
+                ================================= -->
+
+                <div class="upload-produto">
+
+                    <label
+                        for="imagem"
+                        class="area-imagem"
+                    >
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        <span>
+                            Adicionar imagem
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="imagem"
+                        accept="image/*"
+                        hidden
+                    >
+
+
+                    <img
+                        id="previewImagem"
+                        class="preview-imagem"
+                        alt="Preview do produto"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 BOTÃO SALVAR
+            ================================= -->
+
+            <button
+                type="button"
+                id="btnSalvar"
+                class="btn-salvar"
+            >
+                Salvar
+            </button>
+
+        </section>
+
+
+        <!-- ====================================
+             PRODUTOS CADASTRADOS
+        ===================================== -->
+
+        <section class="produtos-cadastrados">
+
+            <h2>
+                Produtos cadastrados
+            </h2>
+
+            <div id="listaProdutosCadastrados"></div>
+
+        </section>
+
+
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-coluna">
+
+                <h2>SPAN GAMES</h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="ofertas.html">Ofertas</a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="ajuda.html">Central de ajuda</a>
+                <a href="ajuda.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="js/header.js"></script>
+    <script src="js/dadosprodutos.js"></script>
+    <script src="js/cadastroprodutos.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,514 @@
+
+/* =========================================
+   SPAN GAMES - PÁGINA DE OFERTAS
+========================================= */
+
+.pagina-ofertas {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 20px 60px;
+    background: #09090e;
+    color: #ffffff;
+}
+
+/* =========================================
+   INTRODUÇÃO
+========================================= */
+
+.ofertas-introducao {
+    margin-bottom: 32px;
+}
+
+.ofertas-introducao h1 {
+    margin: 0 0 14px;
+    font-size: 1.625rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.ofertas-introducao p {
+    max-width: 340px;
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #a6a3b1;
+}
+
+/* =========================================
+   BANNER PROMOCIONAL
+========================================= */
+
+.banner-ofertas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: 100%;
+    max-width: 760px;
+    min-height: 195px;
+
+    padding: 25px 32px;
+    margin-bottom: 90px;
+
+    background: #171321;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.banner-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.banner-etiqueta {
+    margin-bottom: 8px;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.banner-conteudo h2 {
+    margin: 0 0 5px;
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.banner-conteudo p {
+    max-width: 370px;
+    margin: 0 0 15px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #a6a3b1;
+}
+
+/* =========================================
+   BOTÃO DO BANNER
+========================================= */
+
+.btn-ver-ofertas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    min-height: 44px;
+    padding: 12px 24px;
+
+    background: #8b5cf6;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-ver-ofertas:hover {
+    background: #a78bfa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.25);
+}
+
+/* =========================================
+   IMAGEM DO BANNER
+========================================= */
+
+.banner-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 220px;
+    height: 140px;
+}
+
+.banner-imagem i {
+    font-size: 6.875rem;
+    color: #8b5cf6;
+    opacity: 0.85;
+}
+
+/* =========================================
+   SEÇÃO DE PRODUTOS
+========================================= */
+
+.secao-produtos-ofertas {
+    width: 100%;
+    scroll-margin-top: 30px;
+}
+
+.grid-ofertas {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* =========================================
+   CARD DE PRODUTO
+========================================= */
+
+.card-oferta {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 315px;
+    padding: 14px;
+
+    background: #14131b;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card-oferta:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.12);
+}
+
+/* =========================================
+   DESCONTO E AVALIAÇÃO
+========================================= */
+
+.oferta-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.oferta-desconto {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.oferta-avaliacao {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.oferta-avaliacao i {
+    color: #ffcc35;
+}
+
+/* =========================================
+   IMAGEM DO PRODUTO
+========================================= */
+
+.oferta-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 135px;
+    margin: 10px 0;
+
+    overflow: hidden;
+}
+
+.oferta-imagem img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.card-oferta:hover .oferta-imagem img {
+    transform: scale(1.06);
+}
+
+/* =========================================
+   INFORMAÇÕES DO PRODUTO
+========================================= */
+
+.oferta-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.oferta-nome {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+
+    min-height: 54px;
+    margin: 0 0 8px;
+
+    overflow: hidden;
+
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.oferta-preco-antigo {
+    margin: 0 0 5px;
+    font-size: 0.6875rem;
+    color: #777480;
+    text-decoration: line-through;
+}
+
+.oferta-preco {
+    margin: 0 0 15px;
+    font-size: 0.9375rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* =========================================
+   BOTÃO ADICIONAR AO CARRINHO
+========================================= */
+
+.btn-adicionar-oferta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 39px;
+    padding: 10px 8px;
+    margin-top: auto;
+
+    background: #8b5cf6;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 0.625rem;
+    font-weight: 800;
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-adicionar-oferta:hover {
+    background: #a78bfa;
+    transform: translateY(-2px);
+}
+
+.btn-adicionar-oferta:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   SEM OFERTAS
+========================================= */
+
+.mensagem-sem-ofertas {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9375rem;
+    color: #a6a3b1;
+}
+
+.mensagem-sem-ofertas[hidden] {
+    display: none;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* NOTEBOOK E TELAS MENORES */
+
+@media (max-width: 1200px) {
+    .grid-ofertas {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .grid-ofertas {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .banner-ofertas {
+        margin-bottom: 60px;
+    }
+}
+
+/* TABLETS PEQUENOS */
+
+@media (max-width: 650px) {
+    .pagina-ofertas {
+        padding: 25px 15px 45px;
+    }
+
+    .grid-ofertas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .banner-ofertas {
+        padding: 22px;
+        margin-bottom: 45px;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 1.75rem;
+    }
+
+    .banner-imagem {
+        flex-basis: 100px;
+    }
+
+    .banner-imagem i {
+        font-size: 4.0625rem;
+    }
+
+    .card-oferta {
+        padding: 11px;
+    }
+
+    .oferta-imagem {
+        height: 115px;
+    }
+
+    .oferta-nome {
+        font-size: 0.75rem;
+    }
+
+    .btn-adicionar-oferta {
+        font-size: 0.5625rem;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 420px) {
+    .ofertas-introducao h1 {
+        font-size: 1.375rem;
+    }
+
+    .banner-ofertas {
+        gap: 10px;
+        min-height: 180px;
+        padding: 18px;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 1.5625rem;
+    }
+
+    .banner-conteudo p {
+        font-size: 0.75rem;
+    }
+
+    .banner-imagem {
+        flex-basis: 65px;
+    }
+
+    .banner-imagem i {
+        font-size: 3rem;
+    }
+
+    .btn-ver-ofertas {
+        min-width: 125px;
+        min-height: 38px;
+        font-size: 0.625rem;
+    }
+
+    .grid-ofertas {
+        gap: 10px;
+    }
+
+    .oferta-imagem {
+        height: 95px;
+    }
+
+    .oferta-preco {
+        font-size: 0.8125rem;
+    }
+}
+
+/* =========================================
+   LINKS DOS PRODUTOS EM OFERTA
+========================================= */
+
+.oferta-link-imagem,
+.oferta-link-nome {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.oferta-link-nome:hover {
+    color: #a78bfa;
+}
+
+.oferta-link-imagem img {
+    transition: transform 0.25s ease;
+}
+
+.oferta-link-imagem:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   TEMA CLARO - PÁGINA DE OFERTAS
+========================================= */
+
+body.tema-claro .banner-ofertas {
+    background: #f1eef8;
+}
+
+body.tema-claro .card-oferta {
+    background: #ffffff;
+    border-color: #e5e0ee;
+}
+
+/* TEXTOS DO BANNER */
+
+body.tema-claro .banner-conteudo h2,
+body.tema-claro .banner-etiqueta {
+    color: #171321;
+}
+
+body.tema-claro .banner-conteudo p {
+    color: #66616f;
+}
+
+/* TEXTOS DOS PRODUTOS */
+
+body.tema-claro .oferta-nome,
+body.tema-claro .oferta-preco,
+body.tema-claro .oferta-desconto,
+body.tema-claro .oferta-avaliacao {
+    color: #171321;
+}
+
+body.tema-claro .oferta-preco-antigo {
+    color: #777480;
+}

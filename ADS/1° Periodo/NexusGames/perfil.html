@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editar perfil | SPAN Games</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/perfil.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/acessibilidade.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =========================================
+         EDITAR PERFIL
+    ========================================== -->
+
+    <main class="pagina-perfil">
+
+        <section class="perfil-container">
+
+            <!-- =====================================
+                 CABEÇALHO
+            ====================================== -->
+
+            <div class="perfil-cabecalho">
+
+                <div class="perfil-avatar">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div>
+
+                    <span class="perfil-etiqueta">
+                        MINHA CONTA
+                    </span>
+
+                    <h1>Editar Perfil</h1>
+
+                    <p>
+                        Atualize os dados da sua conta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 FORMULÁRIO
+            ====================================== -->
+
+            <form id="formPerfil">
+
+                <!-- =================================
+                     DADOS PESSOAIS
+                ================================== -->
+
+                <div class="perfil-secao">
+
+                    <h2>
+                        <i class="fa-regular fa-user"></i>
+                        Dados Pessoais
+                    </h2>
+
+                    <div class="perfil-grid perfil-grid-dados">
+
+                        <!-- NOME -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilNome"
+                                    placeholder=" "
+                                    required
+                                >
+
+                                <label for="perfilNome">
+                                    Nome completo
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CPF -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input perfil-input-bloqueado">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilCpf"
+                                    placeholder=" "
+                                    readonly
+                                    title="O CPF não pode ser alterado"
+                                >
+
+                                <label for="perfilCpf">
+                                    CPF
+                                </label>
+
+                            </div>
+
+                            <span class="cpf-aviso">
+                                O CPF não pode ser alterado.
+                            </span>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="perfil-campo perfil-campo-email">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="perfilEmail"
+                                    placeholder=" "
+                                    required
+                                >
+
+                                <label for="perfilEmail">
+                                    E-mail
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     ENDEREÇO
+                ================================== -->
+
+                <div class="perfil-secao">
+
+                    <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Endereço
+                    </h2>
+
+                    <div class="perfil-grid perfil-grid-endereco">
+
+                        <!-- CEP -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-location-crosshairs"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilCep"
+                                    placeholder=" "
+                                >
+
+                                <label for="perfilCep">
+                                    CEP
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- RUA -->
+
+                        <div class="perfil-campo perfil-campo-rua">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-road"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilRua"
+                                    placeholder=" "
+                                >
+
+                                <label for="perfilRua">
+                                    Rua
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- NÚMERO DA RESIDÊNCIA -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-house"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilNumero"
+                                    name="numero"
+                                    placeholder=" "
+                                    inputmode="numeric"
+                                    pattern="[0-9]{1,10}"
+                                    maxlength="10"
+                                    autocomplete="address-line2"
+                                    required
+                                >
+
+                                <label for="perfilNumero">
+                                    Número da residência
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BAIRRO -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-map-location-dot"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilBairro"
+                                    placeholder=" "
+                                >
+
+                                <label for="perfilBairro">
+                                    Bairro
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CIDADE -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-regular fa-building"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilCidade"
+                                    placeholder=" "
+                                >
+
+                                <label for="perfilCidade">
+                                    Cidade
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- UF -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-map"></i>
+
+                                <input
+                                    type="text"
+                                    id="perfilUf"
+                                    placeholder=" "
+                                    maxlength="2"
+                                >
+
+                                <label for="perfilUf">
+                                    UF
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     CONTATO
+                ================================== -->
+
+                <div class="perfil-secao">
+
+                    <h2>
+                        <i class="fa-solid fa-phone"></i>
+                        Contato
+                    </h2>
+
+                    <div class="perfil-grid perfil-grid-contato">
+
+                        <!-- CELULAR -->
+
+                        <div class="perfil-campo">
+
+                            <div class="perfil-input">
+
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                <input
+                                    type="tel"
+                                    id="perfilCelular"
+                                    placeholder=" "
+                                >
+
+                                <label for="perfilCelular">
+                                    Celular
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     ACESSO
+                ================================== -->
+
+                <div class="perfil-secao">
+
+                    <h2>
+                        <i class="fa-solid fa-lock"></i>
+                        Acesso
+                    </h2>
+
+
+                    <!-- LOGIN -->
+
+                    <div class="perfil-campo perfil-login">
+
+                        <div class="perfil-input">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="perfilLogin"
+                                placeholder=" "
+                                required
+                            >
+
+                            <label for="perfilLogin">
+                                Login
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    
+<!-- =================================
+     SENHAS
+================================== -->
+
+<div class="perfil-grid perfil-grid-senha">
+
+    <!-- NOVA SENHA -->
+
+    <div class="perfil-campo">
+
+        <div class="perfil-input perfil-input-senha">
+
+            <i class="fa-solid fa-key"></i>
+
+            <input
+                type="password"
+                id="perfilSenha"
+                placeholder=" "
+                autocomplete="new-password"
+            >
+
+            <label for="perfilSenha">
+                Nova senha
+            </label>
+
+            <button
+                type="button"
+                class="perfil-toggle-senha"
+                data-alvo="perfilSenha"
+                aria-label="Mostrar nova senha"
+                aria-pressed="false"
+            >
+                <i class="fa-regular fa-eye"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONFIRMAR SENHA -->
+
+    <div class="perfil-campo">
+
+        <div class="perfil-input perfil-input-senha">
+
+            <i class="fa-solid fa-key"></i>
+
+            <input
+                type="password"
+                id="perfilConfirmarSenha"
+                placeholder=" "
+                autocomplete="new-password"
+            >
+
+            <label for="perfilConfirmarSenha">
+                Confirmar nova senha
+            </label>
+
+            <button
+                type="button"
+                class="perfil-toggle-senha"
+                data-alvo="perfilConfirmarSenha"
+                aria-label="Mostrar confirmação da senha"
+                aria-pressed="false"
+            >
+                <i class="fa-regular fa-eye"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+                <!-- =================================
+                     MENSAGEM
+                ================================== -->
+
+                <div
+                    class="perfil-mensagem"
+                    id="perfilMensagem"
+                ></div>
+
+
+                <!-- =================================
+                     BOTÕES
+                ================================== -->
+
+                <div class="perfil-acoes">
+
+                    <a
+                        href="index.html"
+                        class="btn-cancelar"
+                    >
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+
+                        <i class="fa-regular fa-floppy-disk"></i>
+
+                        Salvar alterações
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- =====================================
+                 EXCLUIR CONTA
+            ====================================== -->
+
+            <section
+                class="excluir-conta-area"
+                aria-labelledby="tituloAreaExcluirConta"
+            >
+
+                <div class="excluir-conta-info">
+
+                    <h2 id="tituloAreaExcluirConta">
+                        Excluir minha conta
+                    </h2>
+
+                    <p>
+                        Esta ação é permanente e não pode ser desfeita.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="btnExcluirConta"
+                    class="btn-excluir-conta"
+                >
+
+                    <i
+                        class="fa-solid fa-trash"
+                        aria-hidden="true"
+                    ></i>
+
+                    Excluir conta
+
+                </button>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         MODAL DE CONFIRMAÇÃO DE EXCLUSÃO
+    ========================================== -->
+
+    <div
+        id="modalExcluirConta"
+        class="modal-excluir-conta"
+        hidden
+    >
+
+        <div
+            class="modal-excluir-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloExcluirConta"
+            aria-describedby="descricaoExcluirConta"
+        >
+
+            <h2 id="tituloExcluirConta">
+                Excluir sua conta?
+            </h2>
+
+            <p id="descricaoExcluirConta">
+                Seu cadastro salvo neste navegador será excluído permanentemente.
+                Esta ação não pode ser desfeita.
+            </p>
+
+            <div class="modal-excluir-acoes">
+
+                <button
+                    type="button"
+                    id="btnCancelarExclusao"
+                    class="btn-cancelar-exclusao"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    id="btnConfirmarExclusao"
+                    class="btn-confirmar-exclusao"
+                >
+                    Sim, excluir conta
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="js/header.js"></script>
+
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,908 @@
+/* =========================================
+   CADASTRO DE PRODUTOS
+========================================= */
+
+.pagina-cadastro-produto {
+    min-height: calc(100vh - 70px);
+
+    padding: 25px 20px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.formulario-produto {
+    width: 100%;
+    max-width: 820px;
+
+    padding: 24px 26px;
+
+    background: #11111a;
+
+    border-radius: 9px;
+}
+
+.formulario-produto h1 {
+    margin: 0 0 26px;
+
+    color: #ffffff;
+
+    font-size: 1.1875rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.formulario-conteudo {
+    display: grid;
+
+    grid-template-columns: 1fr 145px;
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campos-produto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CAMPO FLUTUANTE
+========================================= */
+
+.campo-flutuante {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   INPUT / TEXTAREA / SELECT
+========================================= */
+
+.campo-flutuante input,
+.campo-flutuante textarea,
+.campo-flutuante select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 13px;
+
+    background: transparent;
+
+    border: 2px solid #4c1d95;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.75rem;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background-color 0.2s;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.campo-flutuante textarea {
+    height: 75px;
+
+    padding-top: 14px;
+
+    resize: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.campo-flutuante label {
+    position: absolute;
+
+    left: 10px;
+    top: 50%;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    padding: 0 5px;
+
+    background: #11111a;
+
+    color: #a855f7;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    pointer-events: none;
+
+    transition: 0.2s;
+}
+
+
+/* LABEL DA DESCRIÇÃO */
+
+.campo-flutuante textarea + label {
+    top: 19px;
+}
+
+
+/* =========================================
+   LABEL FLUTUANTE
+========================================= */
+
+.campo-flutuante input:focus + label,
+.campo-flutuante input:not(:placeholder-shown) + label,
+.campo-flutuante textarea:focus + label,
+.campo-flutuante textarea:not(:placeholder-shown) + label {
+    top: 0;
+
+    transform: translateY(-50%);
+
+    padding: 0 6px;
+
+    font-size: 0.625rem;
+
+    color: #a855f7;
+}
+
+
+/* =========================================
+   FOCO
+========================================= */
+
+.campo-flutuante input:focus,
+.campo-flutuante textarea:focus,
+.campo-flutuante select:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 2px rgba(139, 92, 246, 0.08);
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.campo-flutuante select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+.campo-flutuante select option {
+    background: #11111a;
+
+    color: #ffffff;
+}
+
+
+/* LABEL DO SELECT */
+
+.campo-flutuante.select-flutuante label {
+    top: 0;
+
+    transform: translateY(-50%);
+
+    padding: 0 6px;
+
+    font-size: 0.625rem;
+}
+
+
+/* =========================================
+   LINHAS COM DOIS CAMPOS
+========================================= */
+
+.linha-campos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   OPÇÕES
+========================================= */
+
+.opcoes-produto {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 3px;
+
+    color: #ffffff;
+
+    font-size: 0.6875rem;
+}
+
+.opcoes-produto label {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+}
+
+.opcoes-produto input {
+    accent-color: #7c3aed;
+}
+
+
+/* =========================================
+   UPLOAD
+========================================= */
+
+.upload-produto {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.area-imagem {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    background: transparent;
+
+    color: #a855f7;
+
+    border: 2px solid #4c1d95;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.area-imagem:hover {
+    border-color: #8b5cf6;
+
+    background: rgba(124, 58, 237, 0.06);
+}
+
+.area-imagem i {
+    font-size: 1.3125rem;
+}
+
+.area-imagem span {
+    font-size: 0.6875rem;
+}
+
+
+/* =========================================
+   PREVIEW
+========================================= */
+
+.preview-imagem {
+    display: none;
+
+    width: 140px;
+    height: 140px;
+
+    object-fit: contain;
+
+    border: 2px solid #4c1d95;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   BOTÃO SALVAR
+========================================= */
+
+.btn-salvar {
+    display: block;
+
+    min-width: 140px;
+
+    margin: 28px auto 0;
+
+    padding: 10px 35px;
+
+    background: #7c3aed;
+
+    border: none;
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+.btn-salvar:hover {
+    background: #9333ea;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PRODUTOS CADASTRADOS
+========================================= */
+
+.produtos-cadastrados {
+    width: 100%;
+    max-width: 820px;
+
+    padding: 24px 26px;
+
+    background: #11111a;
+
+    border-radius: 9px;
+}
+
+.produtos-cadastrados h2 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+#listaProdutosCadastrados {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   PRODUTO CADASTRADO
+========================================= */
+
+.produto-cadastrado {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px;
+
+    background: #171722;
+
+    border: 1px solid #292936;
+    border-radius: 7px;
+}
+
+
+/* =========================================
+   IMAGEM DO PRODUTO
+========================================= */
+
+.produto-cadastrado img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    background: #0f0f17;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.produto-cadastrado-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.produto-cadastrado-info strong {
+    color: #ffffff;
+
+    font-size: 0.75rem;
+}
+
+.produto-cadastrado-info span {
+    color: #a855f7;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   AÇÕES
+========================================= */
+
+.acoes-produto {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.acoes-produto button {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 0.625rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* =========================================
+   EDITAR
+========================================= */
+
+.btn-editar {
+    background: #7c3aed;
+
+    color: #ffffff;
+}
+
+.btn-editar:hover {
+    background: #9333ea;
+}
+
+
+/* =========================================
+   EXCLUIR
+========================================= */
+
+.btn-excluir {
+    background: #292936;
+
+    color: #ccccd5;
+}
+
+.btn-excluir:hover {
+    background: #ef4444;
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   TEMA CLARO
+================================================== */
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+body.tema-claro .formulario-produto {
+    background: #ffffff;
+
+    color: #171717;
+
+    border: 1px solid #dedee6;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+body.tema-claro .formulario-produto h1 {
+    color: #171717;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+body.tema-claro .campo-flutuante input,
+body.tema-claro .campo-flutuante textarea,
+body.tema-claro .campo-flutuante select {
+    background: #ffffff;
+
+    color: #222222;
+
+    border: 2px solid #c4a7ff;
+}
+
+
+/* =========================================
+   FOCO
+========================================= */
+
+body.tema-claro .campo-flutuante input:focus,
+body.tema-claro .campo-flutuante textarea:focus,
+body.tema-claro .campo-flutuante select:focus {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 2px rgba(124, 58, 237, 0.10);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+body.tema-claro .campo-flutuante label,
+body.tema-claro .campo-flutuante input:focus + label,
+body.tema-claro .campo-flutuante input:not(:placeholder-shown) + label,
+body.tema-claro .campo-flutuante textarea:focus + label,
+body.tema-claro .campo-flutuante textarea:not(:placeholder-shown) + label,
+body.tema-claro .campo-flutuante.select-flutuante label {
+    background: #ffffff;
+
+    color: #7c3aed;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+body.tema-claro .campo-flutuante select option {
+    background: #ffffff;
+
+    color: #222222;
+}
+
+
+/* =========================================
+   OPÇÕES
+========================================= */
+
+body.tema-claro .opcoes-produto,
+body.tema-claro .opcoes-produto label {
+    color: #222222;
+}
+
+
+/* =========================================
+   UPLOAD
+========================================= */
+
+body.tema-claro .area-imagem {
+    background: #ffffff;
+
+    color: #7c3aed;
+
+    border-color: #c4a7ff;
+}
+
+body.tema-claro .area-imagem:hover {
+    background: #faf7ff;
+
+    border-color: #7c3aed;
+}
+
+body.tema-claro .preview-imagem {
+    background: #ffffff;
+
+    border-color: #c4a7ff;
+}
+
+
+/* =========================================
+   PRODUTOS CADASTRADOS
+========================================= */
+
+body.tema-claro .produtos-cadastrados {
+    background: #ffffff;
+
+    color: #171717;
+
+    border: 1px solid #dedee6;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+body.tema-claro .produtos-cadastrados h2 {
+    color: #171717;
+}
+
+
+/* =========================================
+   CARD DO PRODUTO
+========================================= */
+
+body.tema-claro .produto-cadastrado {
+    background: #f8f8fb;
+
+    border-color: #dedee6;
+}
+
+
+/* =========================================
+   IMAGEM
+========================================= */
+
+body.tema-claro .produto-cadastrado img {
+    background: #ffffff;
+
+    border: 1px solid #e5e5eb;
+}
+
+
+/* =========================================
+   NOME
+========================================= */
+
+body.tema-claro .produto-cadastrado-info strong {
+    color: #222222;
+}
+
+
+/* =========================================
+   PREÇO
+========================================= */
+
+body.tema-claro .produto-cadastrado-info span {
+    color: #7c3aed;
+}
+
+
+/* =========================================
+   BOTÃO EXCLUIR
+========================================= */
+
+body.tema-claro .btn-excluir {
+    background: #eeeeF4;
+
+    color: #44444f;
+}
+
+body.tema-claro .btn-excluir:hover {
+    background: #ef4444;
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   AUTOPREENCHIMENTO - TEMA ESCURO
+================================================== */
+
+body.tema-escuro .campo-flutuante input:-webkit-autofill,
+body.tema-escuro .campo-flutuante input:-webkit-autofill:hover,
+body.tema-escuro .campo-flutuante input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+
+    -webkit-box-shadow:
+        0 0 0 1000px #11111a inset;
+
+    box-shadow:
+        0 0 0 1000px #11111a inset;
+
+    caret-color: #ffffff;
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* ==================================================
+   AUTOPREENCHIMENTO - TEMA CLARO
+================================================== */
+
+body.tema-claro .campo-flutuante input:-webkit-autofill,
+body.tema-claro .campo-flutuante input:-webkit-autofill:hover,
+body.tema-claro .campo-flutuante input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #222222;
+
+    -webkit-box-shadow:
+        0 0 0 1000px #ffffff inset;
+
+    box-shadow:
+        0 0 0 1000px #ffffff inset;
+
+    caret-color: #222222;
+
+    border-color: #7c3aed;
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 700px) {
+
+    .pagina-cadastro-produto {
+        padding: 20px 12px 30px;
+
+        gap: 18px;
+    }
+
+    .formulario-produto,
+    .produtos-cadastrados {
+        padding: 20px;
+
+        max-width: 100%;
+    }
+
+    .formulario-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .upload-produto {
+        order: -1;
+    }
+
+    .linha-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-cadastrado {
+        flex-wrap: wrap;
+    }
+
+    .produto-cadastrado-info {
+        min-width: 150px;
+    }
+
+    .acoes-produto {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+
+}
+
+
+/* =========================================
+   NOTIFICAÇÃO PERSONALIZADA
+========================================= */
+
+.notificacao-produto {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 99999;
+
+    max-width: min(380px, calc(100vw - 40px));
+    padding: 16px 24px;
+
+    background: #20172f;
+    color: #ffffff;
+
+    border: 1px solid #8b5cf6;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    pointer-events: none;
+}
+
+.notificacao-produto.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.notificacao-produto.erro {
+    background: #2b1720;
+    border-color: #ef4444;
+    border-left-color: #ef4444;
+}
+
+@media (max-width: 480px) {
+    .notificacao-produto {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        max-width: none;
+    }
+}
+
+/* CAMPOS SEMPRE BRANCOS - TEMA CLARO */
+
+body.tema-claro .campo-flutuante input,
+body.tema-claro .campo-flutuante textarea,
+body.tema-claro .campo-flutuante select,
+body.tema-claro .campo-flutuante input:focus,
+body.tema-claro .campo-flutuante textarea:focus,
+body.tema-claro .campo-flutuante select:focus {
+    background-color: #ffffff !important;
+}
+
+/* FUNDO DAS ETIQUETAS */
+
+body.tema-claro .campo-flutuante label {
+    background-color: #ffffff !important;
+}

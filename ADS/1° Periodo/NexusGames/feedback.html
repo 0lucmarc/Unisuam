@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Feedback | SPAN Games</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/feedback.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/acessibilidade.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =========================================
+         PÁGINA DE FEEDBACK
+    ========================================== -->
+
+    <main class="pagina-feedback">
+
+
+        <!-- =====================================
+             TELA 1 - FORMULÁRIO
+        ====================================== -->
+
+        <section
+            class="feedback-area"
+            id="telaFormulario"
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="feedback-cabecalho">
+
+                <span class="feedback-etiqueta">
+                    SUA OPINIÃO
+                </span>
+
+                <h1>
+                    Lista de Interesses
+                </h1>
+
+                <p>
+                    Conte para a SPAN Games o que você
+                    gostaria de encontrar no site.
+                </p>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form id="formFeedback">
+
+                <div class="feedback-card">
+
+
+                    <!-- =================================
+                         PARTE SUPERIOR
+                    ================================== -->
+
+                    <div class="feedback-colunas">
+
+
+                        <!-- CATEGORIAS -->
+
+                        <div class="feedback-bloco">
+
+                            <h2>
+                                Quais categorias você gostaria
+                                de acompanhar?
+                            </h2>
+
+
+                            <label class="opcao-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="categorias"
+                                    value="Controles"
+                                >
+
+                                <span class="check-personalizado"></span>
+
+                                Controles
+
+                            </label>
+
+
+                            <label class="opcao-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="categorias"
+                                    value="Mouses"
+                                >
+
+                                <span class="check-personalizado"></span>
+
+                                Mouses
+
+                            </label>
+
+
+                            <label class="opcao-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="categorias"
+                                    value="Teclados"
+                                >
+
+                                <span class="check-personalizado"></span>
+
+                                Teclados
+
+                            </label>
+
+
+                            <label class="opcao-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="categorias"
+                                    value="Headset"
+                                >
+
+                                <span class="check-personalizado"></span>
+
+                                Headset
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- DIVISOR -->
+
+                        <div class="feedback-divisor"></div>
+
+
+                        <!-- INTERESSES -->
+
+                        <div class="feedback-bloco">
+
+                            <h2>
+                                O que você gostaria de encontrar
+                                no nosso site?
+                            </h2>
+
+
+                            <div class="interesses-grid">
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Produtos Novos"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Produtos Novos
+
+                                </label>
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Novidades toda semana"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Novidades toda semana
+
+                                </label>
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Lançamentos"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Lançamentos
+
+                                </label>
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Aviso quando um produto volta ao estoque"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Aviso quando um produto
+                                    volta ao estoque
+
+                                </label>
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Produtos em promoção"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Produtos em promoção
+
+                                </label>
+
+
+                                <label class="opcao-check">
+
+                                    <input
+                                        type="checkbox"
+                                        name="interesses"
+                                        value="Produtos mais vendidos"
+                                    >
+
+                                    <span class="check-personalizado"></span>
+
+                                    Produtos mais vendidos
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         PARTE INFERIOR
+                    ================================== -->
+
+                    <div class="feedback-inferior">
+
+
+                        <!-- AVALIAÇÃO -->
+
+                        <div class="feedback-avaliacao">
+
+                            <h2>
+                                Avaliação
+                            </h2>
+
+
+                            <div
+                                class="estrelas"
+                                id="estrelas"
+                            >
+
+                                <button
+                                    type="button"
+                                    class="estrela"
+                                    data-valor="1"
+                                    aria-label="1 estrela"
+                                >
+                                    ★
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="estrela"
+                                    data-valor="2"
+                                    aria-label="2 estrelas"
+                                >
+                                    ★
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="estrela"
+                                    data-valor="3"
+                                    aria-label="3 estrelas"
+                                >
+                                    ★
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="estrela"
+                                    data-valor="4"
+                                    aria-label="4 estrelas"
+                                >
+                                    ★
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="estrela"
+                                    data-valor="5"
+                                    aria-label="5 estrelas"
+                                >
+                                    ★
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MAIS GOSTOU -->
+
+                        <div class="feedback-gostou">
+
+                            <h2>
+                                O que você mais gostou?
+                            </h2>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Preços"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Preços
+
+                            </label>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Variedade"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Variedade
+
+                            </label>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Qualidade"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Qualidade
+
+                            </label>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Facilidade de compra"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Facilidade de compra
+
+                            </label>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Visual do site"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Visual do site
+
+                            </label>
+
+
+                            <label class="opcao-radio">
+
+                                <input
+                                    type="radio"
+                                    name="maisGostou"
+                                    value="Promoções"
+                                >
+
+                                <span class="radio-personalizado"></span>
+
+                                Promoções
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MENSAGEM -->
+
+                    <div
+                        class="feedback-mensagem"
+                        id="feedbackMensagem"
+                    ></div>
+
+
+                    <!-- SALVAR -->
+
+                    <div class="feedback-acoes">
+
+                        <button
+                            type="submit"
+                            class="btn-feedback"
+                        >
+                            <i class="fa-regular fa-floppy-disk"></i>
+
+                            Salvar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =====================================
+             TELA 2 - CONFIRMAÇÃO
+        ====================================== -->
+
+        <section
+            class="feedback-area feedback-confirmacao"
+            id="telaConfirmacao"
+            hidden
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="feedback-cabecalho">
+
+                <span class="feedback-etiqueta">
+                    PREFERÊNCIAS SALVAS
+                </span>
+
+                <h1>
+                    Confirmação dos Dados
+                </h1>
+
+                <p>
+                    Confira as informações que você enviou.
+                </p>
+
+            </div>
+
+
+            <div class="confirmacao-card">
+
+
+                <!-- PARTE SUPERIOR -->
+
+                <div class="confirmacao-colunas">
+
+
+                    <!-- CATEGORIAS SALVAS -->
+
+                    <div class="confirmacao-bloco">
+
+                        <h2>
+                            Categorias que você gostaria
+                            de acompanhar
+                        </h2>
+
+                        <div id="confirmacaoCategorias"></div>
+
+                    </div>
+
+
+                    <div class="confirmacao-divisor"></div>
+
+
+                    <!-- INTERESSES SALVOS -->
+
+                    <div class="confirmacao-bloco">
+
+                        <h2>
+                            O que você gostaria de encontrar
+                            no nosso site?
+                        </h2>
+
+                        <div id="confirmacaoInteresses"></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PARTE INFERIOR -->
+
+                <div class="confirmacao-inferior">
+
+
+                    <!-- MAIS GOSTOU -->
+
+                    <div class="confirmacao-bloco">
+
+                        <h2>
+                            O que você mais gostou?
+                        </h2>
+
+                        <div
+                            class="confirmacao-destaque"
+                            id="confirmacaoGostou"
+                        >
+                            -
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVALIAÇÃO -->
+
+                    <div class="confirmacao-bloco">
+
+                        <h2>
+                            Avaliação
+                        </h2>
+
+                        <div
+                            class="confirmacao-estrelas"
+                            id="confirmacaoAvaliacao"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="confirmacao-acoes">
+
+                    <button
+                        type="button"
+                        class="btn-feedback btn-secundario"
+                        id="btnEditarFeedback"
+                    >
+                        <i class="fa-regular fa-pen-to-square"></i>
+
+                        Editar preferências
+                    </button>
+
+
+                    <a
+                        href="index.html"
+                        class="btn-feedback"
+                    >
+                        <i class="fa-solid fa-house"></i>
+
+                        Voltar para o início
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+
+            <div class="footer-coluna">
+
+                <h2>
+                    SPAN GAMES
+                </h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    NAVEGAÇÃO
+                </h3>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="produtos.html">
+                    Produtos
+                </a>
+
+                <a href="ofertas.html">
+                    Ofertas
+                </a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    ATENDIMENTO
+                </h3>
+
+                <a href="ajuda.html">
+                    Central de ajuda
+                </a>
+
+                <a href="ajuda.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="js/header.js"></script>
+
+    <script src="js/feedback.js"></script>
+
+</body>
+
+</html>

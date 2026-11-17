@@ -1,0 +1,1161 @@
+/* =========================================
+   MEUS PEDIDOS - SPAN GAMES
+========================================= */
+
+.pagina-pedidos {
+    width: 100%;
+    max-width: 1050px;
+
+    min-height: calc(100vh - 120px);
+
+    margin: 0 auto;
+    padding: 42px 30px 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.pedidos-cabecalho {
+    margin-bottom: 24px;
+}
+
+
+.pedidos-etiqueta {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #a855f7;
+
+    font-size: 0.5625rem;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+.pedidos-cabecalho h1 {
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.pedidos-cabecalho p {
+    margin: 0;
+
+    color: #858591;
+
+    font-size: 0.6875rem;
+}
+
+
+/* =========================================
+   RESUMO DOS PEDIDOS
+========================================= */
+
+.pedidos-resumo {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns:
+        1fr
+        1px
+        1fr
+        1px
+        1fr;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+    padding: 18px 24px;
+
+    background-color: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+
+.resumo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.resumo-icone {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: rgba(124, 58, 237, 0.12);
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 8px;
+
+    color: #a855f7;
+
+    font-size: 0.875rem;
+}
+
+
+.resumo-item > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.resumo-item span {
+    color: #858591;
+
+    font-size: 0.5625rem;
+}
+
+
+.resumo-item strong {
+    color: #ffffff;
+
+    font-size: 1.0625rem;
+    font-weight: 700;
+}
+
+
+.resumo-divisor {
+    width: 1px;
+    height: 35px;
+
+    background-color: #292936;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.lista-pedidos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   CARD DO PEDIDO
+========================================= */
+
+.pedido-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.16);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOPO DO PEDIDO
+========================================= */
+
+.pedido-topo {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    background-color: #14141e;
+
+    border-bottom: 1px solid #242433;
+}
+
+
+.pedido-identificacao,
+.pedido-data-area {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.pedido-identificacao span,
+.pedido-data-area span {
+    color: #70707c;
+
+    font-size: 0.5rem;
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+}
+
+
+.pedido-identificacao strong,
+.pedido-data-area strong {
+    color: #ffffff;
+
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.pedido-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    background-color: rgba(124, 58, 237, 0.10);
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 20px;
+
+    color: #b985ff;
+
+    font-size: 0.5625rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.pedido-status i {
+    font-size: 0.375rem;
+}
+
+
+/* ENTREGUE */
+
+.pedido-status.entregue {
+    background-color: rgba(74, 190, 120, 0.10);
+
+    border-color: rgba(74, 190, 120, 0.25);
+
+    color: #78d69b;
+}
+
+
+/* =========================================
+   ACOMPANHAMENTO
+========================================= */
+
+.pedido-acompanhamento {
+    position: relative;
+
+    padding: 30px 35px 27px;
+}
+
+
+/* =========================================
+   LINHA DE PROGRESSO
+========================================= */
+
+.progresso-linha {
+    position: absolute;
+
+    top: 43px;
+    left: 75px;
+    right: 75px;
+
+    height: 3px;
+
+    overflow: hidden;
+
+    background-color: #292936;
+
+    border-radius: 10px;
+}
+
+
+.progresso-preenchimento {
+    width: 0%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #a855f7
+        );
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   ETAPAS
+========================================= */
+
+.progresso-etapas {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.progresso-etapa {
+    width: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #666672;
+
+    text-align: center;
+
+    font-size: 0.5rem;
+    font-weight: 600;
+}
+
+
+/* CÍRCULO */
+
+.etapa-icone {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #171720;
+
+    border: 2px solid #343442;
+    border-radius: 50%;
+
+    color: #666672;
+
+    font-size: 0.5625rem;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.25s,
+        border-color 0.25s,
+        color 0.25s,
+        box-shadow 0.25s;
+}
+
+
+/* ETAPA ATIVA / CONCLUÍDA */
+
+.progresso-etapa.ativa {
+    color: #c7a7ff;
+}
+
+
+.progresso-etapa.ativa .etapa-icone {
+    background-color: #7c3aed;
+
+    border-color: #a855f7;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(124, 58, 237, 0.10);
+}
+
+
+/* ETAPA ATUAL */
+
+.progresso-etapa.atual .etapa-icone {
+    box-shadow:
+        0 0 0 4px
+        rgba(124, 58, 237, 0.15),
+        0 0 16px
+        rgba(168, 85, 247, 0.20);
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.pedido-conteudo {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr
+        1fr;
+
+    gap: 30px;
+
+    padding: 23px 25px;
+
+    border-top: 1px solid #242433;
+}
+
+
+/* =========================================
+   PRODUTOS
+========================================= */
+
+.pedido-produtos h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+
+.pedido-produtos-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* PRODUTO GERADO PELO JS */
+
+.pedido-produto {
+    display: grid;
+
+    grid-template-columns:
+        62px
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.pedido-produto-imagem {
+    width: 62px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #0d0d15;
+
+    border: 1px solid #252532;
+    border-radius: 6px;
+}
+
+
+.pedido-produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    padding: 5px;
+
+    object-fit: contain;
+
+    box-sizing: border-box;
+}
+
+
+.pedido-produto-info {
+    min-width: 0;
+}
+
+
+.pedido-produto-info h4 {
+    margin: 0 0 4px;
+
+    overflow: hidden;
+
+    color: #eeeeF3;
+
+    font-size: 0.625rem;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.pedido-produto-info span {
+    color: #777783;
+
+    font-size: 0.5625rem;
+}
+
+
+.pedido-produto-preco {
+    color: #a855f7;
+
+    font-size: 0.625rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.pedido-informacoes {
+    padding-left: 25px;
+
+    border-left: 1px solid #292936;
+}
+
+
+.pedido-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #22222d;
+}
+
+
+.pedido-info:last-child {
+    border-bottom: none;
+}
+
+
+.pedido-info > span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #777783;
+
+    font-size: 0.5625rem;
+}
+
+
+.pedido-info > span i {
+    width: 13px;
+
+    color: #a855f7;
+
+    text-align: center;
+}
+
+
+.pedido-info strong {
+    color: #eeeeF3;
+
+    font-size: 0.5625rem;
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* TOTAL */
+
+.pedido-info .pedido-total {
+    color: #a855f7;
+
+    font-size: 0.6875rem;
+}
+
+
+/* ENDEREÇO */
+
+.pedido-endereco-info {
+    align-items: flex-start;
+}
+
+
+.pedido-endereco {
+    max-width: 160px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RODAPÉ DO PEDIDO
+========================================= */
+
+.pedido-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 22px;
+
+    background-color: #14141e;
+
+    border-top: 1px solid #242433;
+}
+
+
+.pedido-mensagem-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #858591;
+
+    font-size: 0.5625rem;
+}
+
+
+.pedido-mensagem-status i {
+    color: #a855f7;
+
+    font-size: 0.6875rem;
+}
+
+
+/* =========================================
+   BOTÃO DETALHES
+========================================= */
+
+.btn-detalhes-pedido {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    background-color: transparent;
+
+    border: 1px solid #30303e;
+    border-radius: 5px;
+
+    color: #aaaab5;
+
+    font-family: inherit;
+    font-size: 0.5625rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        color 0.2s;
+}
+
+
+.btn-detalhes-pedido:hover {
+    background-color: #1d1d29;
+
+    border-color: #7c3aed;
+
+    color: #c6a5ff;
+}
+
+
+.btn-detalhes-pedido i {
+    font-size: 0.5rem;
+
+    transition: transform 0.2s;
+}
+
+
+.pedido-card.aberto
+.btn-detalhes-pedido i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   PEDIDO FECHADO
+========================================= */
+
+/*
+   O JS pode adicionar a classe "compacto"
+   para esconder os detalhes.
+*/
+
+.pedido-card.compacto
+.pedido-acompanhamento,
+
+.pedido-card.compacto
+.pedido-conteudo {
+    display: none;
+}
+
+
+/* =========================================
+   SEM PEDIDOS
+========================================= */
+
+.pedidos-vazio {
+    width: 100%;
+
+    padding: 65px 30px;
+
+    background-color: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+.pedidos-vazio-icone {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    background-color: rgba(124, 58, 237, 0.10);
+
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 50%;
+
+    color: #a855f7;
+
+    font-size: 1.3125rem;
+}
+
+
+.pedidos-vazio h2 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+
+.pedidos-vazio p {
+    margin: 0 0 20px;
+
+    color: #777783;
+
+    font-size: 0.625rem;
+}
+
+
+/* =========================================
+   BOTÃO VER PRODUTOS
+========================================= */
+
+.btn-ver-produtos {
+    min-height: 37px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 17px;
+
+    background-color: #7c3aed;
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    font-size: 0.625rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+
+.btn-ver-produtos:hover {
+    background-color: #9147ff;
+}
+
+
+.btn-ver-produtos:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+body.tema-claro
+.pedidos-cabecalho h1 {
+    color: #22222a;
+}
+
+
+body.tema-claro
+.pedidos-cabecalho p {
+    color: #666674;
+}
+
+
+body.tema-claro
+.pedidos-resumo,
+
+body.tema-claro
+.pedido-card,
+
+body.tema-claro
+.pedidos-vazio {
+    background-color: #ffffff;
+
+    border-color: #dedee6;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+body.tema-claro
+.resumo-item strong {
+    color: #22222a;
+}
+
+
+body.tema-claro
+.resumo-divisor {
+    background-color: #dedee6;
+}
+
+
+body.tema-claro
+.pedido-topo,
+
+body.tema-claro
+.pedido-rodape {
+    background-color: #f8f8fb;
+
+    border-color: #dedee6;
+}
+
+
+body.tema-claro
+.pedido-identificacao strong,
+
+body.tema-claro
+.pedido-data-area strong,
+
+body.tema-claro
+.pedido-produtos h3,
+
+body.tema-claro
+.pedido-produto-info h4,
+
+body.tema-claro
+.pedido-info strong,
+
+body.tema-claro
+.pedidos-vazio h2 {
+    color: #292932;
+}
+
+
+body.tema-claro
+.pedido-acompanhamento,
+
+body.tema-claro
+.pedido-conteudo {
+    border-color: #dedee6;
+}
+
+
+body.tema-claro
+.progresso-linha {
+    background-color: #dedee6;
+}
+
+
+body.tema-claro
+.etapa-icone {
+    background-color: #ffffff;
+
+    border-color: #cfcfd8;
+}
+
+
+body.tema-claro
+.progresso-etapa.ativa .etapa-icone {
+    background-color: #7c3aed;
+
+    border-color: #a855f7;
+
+    color: #ffffff;
+}
+
+
+body.tema-claro
+.pedido-produto-imagem {
+    background-color: #f6f6f9;
+
+    border-color: #dedee6;
+}
+
+
+body.tema-claro
+.pedido-informacoes {
+    border-left-color: #dedee6;
+}
+
+
+body.tema-claro
+.pedido-info {
+    border-bottom-color: #e8e8ed;
+}
+
+
+body.tema-claro
+.btn-detalhes-pedido {
+    border-color: #d4d4dc;
+
+    color: #555560;
+}
+
+
+body.tema-claro
+.btn-detalhes-pedido:hover {
+    background-color: #f1edff;
+
+    border-color: #7c3aed;
+
+    color: #7c3aed;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .pagina-pedidos {
+        padding:
+            35px
+            22px
+            55px;
+    }
+
+
+    .pedido-topo {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+
+    .pedido-status {
+        width: fit-content;
+    }
+
+
+    .pedido-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+
+    .pedido-informacoes {
+        padding-left: 0;
+        padding-top: 15px;
+
+        border-left: none;
+        border-top: 1px solid #292936;
+    }
+
+
+    body.tema-claro
+    .pedido-informacoes {
+        border-top-color: #dedee6;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .pedidos-resumo {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .resumo-item {
+        justify-content: flex-start;
+    }
+
+
+    .resumo-divisor {
+        width: 100%;
+        height: 1px;
+    }
+
+
+    .pedido-topo {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .pedido-acompanhamento {
+        padding:
+            28px
+            10px
+            25px;
+    }
+
+
+    .progresso-linha {
+        left: 38px;
+        right: 38px;
+    }
+
+
+    .progresso-etapa {
+        width: 60px;
+
+        font-size: 0.4375rem;
+    }
+
+
+    .etapa-icone {
+        width: 25px;
+        height: 25px;
+
+        font-size: 0.5rem;
+    }
+
+
+    .pedido-conteudo {
+        padding: 20px 18px;
+    }
+
+
+    .pedido-rodape {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .btn-detalhes-pedido {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .pagina-pedidos {
+        padding:
+            28px
+            14px
+            45px;
+    }
+
+
+    .pedidos-cabecalho h1 {
+        font-size: 1.3125rem;
+    }
+
+
+    .pedido-produto {
+        grid-template-columns:
+            52px
+            1fr;
+    }
+
+
+    .pedido-produto-imagem {
+        width: 52px;
+        height: 48px;
+    }
+
+
+    .pedido-produto-preco {
+        grid-column: 2;
+    }
+
+
+    .progresso-etapa span {
+        display: none;
+    }
+
+
+    .progresso-linha {
+        top: 40px;
+    }
+
+}

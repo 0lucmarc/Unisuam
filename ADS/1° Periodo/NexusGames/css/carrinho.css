@@ -1,0 +1,377 @@
+/* =========================
+   PÁGINA DO CARRINHO
+========================= */
+
+.pagina-carrinho {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 30px 45px;
+}
+
+.pagina-carrinho h1 {
+    margin: 0 0 24px;
+
+    font-size: 1.875rem;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo-carrinho {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 300px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   ITENS
+========================= */
+
+.itens-carrinho {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 15px 18px;
+
+    min-height: 105px;
+
+    background: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 10px;
+}
+
+
+/* IMAGEM DO PRODUTO */
+
+.item-carrinho img {
+    width: 85px;
+    height: 75px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.info-produto {
+    flex: 1;
+}
+
+.info-produto h3 {
+    margin: 0 0 6px;
+
+    font-size: 1rem;
+}
+
+
+/* AVALIAÇÃO */
+
+.avaliacao {
+    margin-bottom: 7px;
+
+    font-size: 0.75rem;
+}
+
+.avaliacao span {
+    color: #888;
+
+    font-size: 0.625rem;
+}
+
+
+/* PREÇO */
+
+.preco-produto {
+    color: #a855f7;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* =========================
+   QUANTIDADE
+========================= */
+
+.quantidade {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.quantidade button {
+    width: 27px;
+    height: 27px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #242433;
+    color: white;
+
+    cursor: pointer;
+}
+
+.quantidade button:hover {
+    background: #343447;
+}
+
+.quantidade span {
+    min-width: 18px;
+
+    text-align: center;
+
+    font-size: 0.8125rem;
+}
+
+
+/* =========================
+   REMOVER
+========================= */
+
+.btn-remover {
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    font-size: 0.875rem;
+
+    cursor: pointer;
+}
+
+.btn-remover:hover {
+    color: #ef4444;
+}
+
+
+/* =========================
+   RESUMO
+========================= */
+
+.resumo-carrinho {
+    padding: 20px;
+
+    background: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 10px;
+}
+
+.resumo-carrinho h2 {
+    margin: 0 0 20px;
+
+    font-size: 1.375rem;
+}
+
+
+/* LINHAS DO RESUMO */
+
+.linha-resumo,
+.total-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    font-size: 0.875rem;
+}
+
+.linha-resumo span {
+    color: #aaa;
+}
+
+.linha-resumo strong {
+    font-size: 0.875rem;
+}
+
+
+/* TOTAL */
+
+.total-carrinho {
+    font-size: 1rem;
+}
+
+.total-carrinho strong {
+    color: #a855f7;
+
+    font-size: 1rem;
+}
+
+
+/* LINHA */
+
+.resumo-carrinho hr {
+    border: none;
+    border-top: 1px solid #242433;
+
+    margin: 16px 0;
+}
+
+
+/* =========================
+   FINALIZAR
+========================= */
+
+.btn-finalizar {
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #7c3aed;
+    color: white;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #9333ea;
+}
+
+
+/* =========================
+   CARRINHO VAZIO
+========================= */
+
+.carrinho-vazio {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #11111a;
+
+    border: 1px solid #242433;
+    border-radius: 10px;
+}
+
+.carrinho-vazio i {
+    font-size: 2.1875rem;
+
+    color: #7c3aed;
+}
+
+.carrinho-vazio p {
+    color: #888;
+}
+
+.carrinho-vazio a {
+    display: inline-block;
+
+    margin-top: 12px;
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    background: #7c3aed;
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+    .pagina-carrinho {
+        padding: 25px 20px;
+    }
+
+    .pagina-carrinho h1 {
+        font-size: 1.625rem;
+    }
+
+    .conteudo-carrinho {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carrinho {
+        flex-wrap: wrap;
+    }
+
+    .resumo-carrinho {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .item-carrinho {
+        gap: 12px;
+
+        padding: 14px;
+    }
+
+    .item-carrinho img {
+        width: 70px;
+        height: 65px;
+    }
+
+    .info-produto h3 {
+        font-size: 0.875rem;
+    }
+
+    .quantidade {
+        margin-left: auto;
+    }
+}
+
+/* =========================================
+   CARRINHO - FOOTER NO FINAL DA PÁGINA
+========================================= */
+
+/* ESTRUTURA DA PÁGINA */
+
+body:has(.pagina-carrinho) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTEÚDO DO CARRINHO */
+
+.pagina-carrinho {
+    flex: 1;
+}
+
+/* FOOTER */
+
+body:has(.pagina-carrinho) footer {
+    margin-top: auto;
+    flex-shrink: 0;
+}

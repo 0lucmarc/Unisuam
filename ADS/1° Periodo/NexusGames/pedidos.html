@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Meus pedidos | SPAN Games</title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- CSS DA PÁGINA -->
+
+    <link
+        rel="stylesheet"
+        href="css/pedidos.css"
+    >
+
+
+    <!-- ACESSIBILIDADE -->
+
+    <link
+        rel="stylesheet"
+        href="css/acessibilidade.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =========================================
+         MEUS PEDIDOS
+    ========================================== -->
+
+    <main class="pagina-pedidos">
+
+
+        <!-- =====================================
+             CABEÇALHO
+        ====================================== -->
+
+        <div class="pedidos-cabecalho">
+
+            <span class="pedidos-etiqueta">
+                MINHA CONTA
+            </span>
+
+
+            <h1>
+                Meus pedidos
+            </h1>
+
+
+            <p>
+                Acompanhe suas compras e o status
+                de entrega dos seus pedidos.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             RESUMO
+        ====================================== -->
+
+        <section
+            class="pedidos-resumo"
+            id="pedidosResumo"
+        >
+
+            <div class="resumo-item">
+
+                <div class="resumo-icone">
+
+                    <i class="fa-solid fa-box"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Pedidos
+                    </span>
+
+                    <strong id="quantidadePedidos">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="resumo-divisor"></div>
+
+
+            <div class="resumo-item">
+
+                <div class="resumo-icone">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Em andamento
+                    </span>
+
+                    <strong id="pedidosAndamento">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="resumo-divisor"></div>
+
+
+            <div class="resumo-item">
+
+                <div class="resumo-icone">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Entregues
+                    </span>
+
+                    <strong id="pedidosEntregues">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             LISTA DE PEDIDOS
+        ====================================== -->
+
+        <section
+            class="lista-pedidos"
+            id="listaPedidos"
+        >
+
+            <!--
+                O JavaScript vai colocar
+                os pedidos aqui.
+            -->
+
+        </section>
+
+
+        <!-- =====================================
+             NENHUM PEDIDO
+        ====================================== -->
+
+        <section
+            class="pedidos-vazio"
+            id="pedidosVazio"
+            hidden
+        >
+
+            <div class="pedidos-vazio-icone">
+
+                <i class="fa-solid fa-box-open"></i>
+
+            </div>
+
+
+            <h2>
+                Você ainda não possui pedidos
+            </h2>
+
+
+            <p>
+                Quando você finalizar uma compra,
+                seus pedidos aparecerão aqui.
+            </p>
+
+
+            <a
+                href="produtos.html"
+                class="btn-ver-produtos"
+            >
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                Ver produtos
+
+            </a>
+
+        </section>
+
+
+        <!-- =====================================
+             MODELO DO PEDIDO
+             O JS VAI USAR ESSA ESTRUTURA
+        ====================================== -->
+
+        <template id="templatePedido">
+
+
+            <article class="pedido-card">
+
+
+                <!-- =================================
+                     CABEÇALHO DO PEDIDO
+                ================================== -->
+
+                <div class="pedido-topo">
+
+
+                    <div class="pedido-identificacao">
+
+                        <span>
+                            PEDIDO
+                        </span>
+
+                        <strong class="pedido-numero">
+                            #SPAN-000000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pedido-data-area">
+
+                        <span>
+                            Realizado em
+                        </span>
+
+                        <strong class="pedido-data">
+                            00/00/0000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="pedido-status">
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        <span>
+                            Pedido confirmado
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     ACOMPANHAMENTO
+                ================================== -->
+
+                <div class="pedido-acompanhamento">
+
+
+                    <!-- LINHA -->
+
+                    <div class="progresso-linha">
+
+                        <div
+                            class="progresso-preenchimento"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- ETAPAS -->
+
+                    <div class="progresso-etapas">
+
+
+                        <!-- CONFIRMADO -->
+
+                        <div
+                            class="progresso-etapa"
+                            data-etapa="1"
+                        >
+
+                            <div class="etapa-icone">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+                            <span>
+                                Confirmado
+                            </span>
+
+                        </div>
+
+
+                        <!-- PREPARANDO -->
+
+                        <div
+                            class="progresso-etapa"
+                            data-etapa="2"
+                        >
+
+                            <div class="etapa-icone">
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </div>
+
+                            <span>
+                                Preparando
+                            </span>
+
+                        </div>
+
+
+                        <!-- ENVIADO -->
+
+                        <div
+                            class="progresso-etapa"
+                            data-etapa="3"
+                        >
+
+                            <div class="etapa-icone">
+
+                                <i class="fa-solid fa-truck-fast"></i>
+
+                            </div>
+
+                            <span>
+                                Enviado
+                            </span>
+
+                        </div>
+
+
+                        <!-- A CAMINHO -->
+
+                        <div
+                            class="progresso-etapa"
+                            data-etapa="4"
+                        >
+
+                            <div class="etapa-icone">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <span>
+                                A caminho
+                            </span>
+
+                        </div>
+
+
+                        <!-- ENTREGUE -->
+
+                        <div
+                            class="progresso-etapa"
+                            data-etapa="5"
+                        >
+
+                            <div class="etapa-icone">
+
+                                <i class="fa-solid fa-house"></i>
+
+                            </div>
+
+                            <span>
+                                Entregue
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUTOS
+                ================================== -->
+
+                <div class="pedido-conteudo">
+
+
+                    <div class="pedido-produtos">
+
+
+                        <h3>
+                            Produtos
+                        </h3>
+
+
+                        <div class="pedido-produtos-lista">
+
+                            <!--
+                                Produtos inseridos
+                                pelo pedidos.js
+                            -->
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         INFORMAÇÕES
+                    ================================== -->
+
+                    <aside class="pedido-informacoes">
+
+
+                        <!-- PAGAMENTO -->
+
+                        <div class="pedido-info">
+
+                            <span>
+
+                                <i class="fa-regular fa-credit-card"></i>
+
+                                Pagamento
+
+                            </span>
+
+                            <strong class="pedido-pagamento">
+                                PIX
+                            </strong>
+
+                        </div>
+
+
+                        <!-- TOTAL -->
+
+                        <div class="pedido-info">
+
+                            <span>
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                                Total
+
+                            </span>
+
+                            <strong class="pedido-total">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+                        <!-- ENDEREÇO -->
+
+                        <div class="pedido-info pedido-endereco-info">
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Entrega
+
+                            </span>
+
+
+                            <strong class="pedido-endereco">
+                                Endereço não informado
+                            </strong>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+
+                <!-- =================================
+                     RODAPÉ DO PEDIDO
+                ================================== -->
+
+                <div class="pedido-rodape">
+
+
+                    <div class="pedido-mensagem-status">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                        <span class="pedido-mensagem">
+                            Seu pedido foi confirmado.
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-detalhes-pedido"
+                    >
+
+                        Ver detalhes
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+                </div>
+
+
+            </article>
+
+        </template>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+
+            <div class="footer-coluna">
+
+                <h2>
+                    SPAN GAMES
+                </h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    NAVEGAÇÃO
+                </h3>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="produtos.html">
+                    Produtos
+                </a>
+
+                <a href="ofertas.html">
+                    Ofertas
+                </a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    ATENDIMENTO
+                </h3>
+
+                <a href="ajuda.html">
+                    Central de ajuda
+                </a>
+
+                <a href="ajuda.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="js/header.js"></script>
+
+    <script src="js/pedidos.js"></script>
+
+
+</body>
+
+</html>

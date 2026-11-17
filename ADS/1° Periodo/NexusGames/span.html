@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | SPAN Games</title>
+
+
+    <!-- ÍCONES -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS DO SITE -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- CSS DO CHECKOUT -->
+
+    <link
+        rel="stylesheet"
+        href="css/span.css"
+    >
+
+
+    <!-- ACESSIBILIDADE -->
+
+    <link
+        rel="stylesheet"
+        href="css/acessibilidade.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =========================================
+         CHECKOUT
+    ========================================== -->
+
+    <main class="pagina-checkout">
+
+        <div class="checkout-container">
+
+
+            <!-- =================================
+                 TÍTULO
+            ================================== -->
+
+            <div class="checkout-titulo">
+
+                <span class="checkout-icone">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </span>
+
+
+                <div>
+
+                    <h1>
+                        Finalizar compra
+                    </h1>
+
+                    <p>
+                        Confira seu pedido e escolha
+                        a forma de pagamento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 RESUMO DO PEDIDO
+            ================================== -->
+
+            <section class="resumo-pedido">
+
+                <h2>
+                    Resumo do pedido
+                </h2>
+
+
+                <div id="produtosCheckout"></div>
+
+
+                <div class="checkout-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalCheckout">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 PAGAMENTO
+            ================================== -->
+
+            <section class="pagamento">
+
+                <h2>
+                    Forma de pagamento
+                </h2>
+
+
+                <!-- =================================
+                     ABAS
+                ================================== -->
+
+                <div class="tabs">
+
+                    <button
+                        class="tab active"
+                        id="t-pix"
+                        type="button"
+                        onclick="openTab('pix')"
+                    >
+
+                        <i class="fa-brands fa-pix"></i>
+
+                        PIX
+
+                    </button>
+
+
+                    <button
+                        class="tab"
+                        id="t-cartao"
+                        type="button"
+                        onclick="openTab('cartao')"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        Cartão
+
+                    </button>
+
+
+                    <button
+                        class="tab"
+                        id="t-boleto"
+                        type="button"
+                        onclick="openTab('boleto')"
+                    >
+
+                        <i class="fa-solid fa-barcode"></i>
+
+                        Boleto
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     PIX
+                ================================== -->
+
+                <div
+                    id="pix"
+                    class="conteudo-pagamento"
+                >
+
+                    <div class="titulo-metodo">
+
+                        <h3>
+                            Pagamento via PIX
+                        </h3>
+
+                        <p>
+                            Escaneie o QR Code utilizando
+                            o aplicativo do seu banco.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pix-area">
+
+                        <div class="qrbox">
+
+                            <img
+                                src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=contato@spangames.com"
+                                alt="QR Code PIX"
+                            >
+
+                        </div>
+
+
+                        <div class="pix-informacoes">
+
+                            <span class="label">
+                                Chave PIX
+                            </span>
+
+
+                            <div class="pix-chave">
+
+                                <span id="chavePix">
+                                    contato@spangames.com
+                                </span>
+
+
+                                <button
+                                    type="button"
+                                    id="copiarPix"
+                                    title="Copiar chave PIX"
+                                >
+
+                                    <i class="fa-regular fa-copy"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <span class="label">
+                                Valor
+                            </span>
+
+
+                            <strong
+                                class="valor-pagamento"
+                                id="valorPix"
+                            >
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-pagar"
+                        type="button"
+                        onclick="pagar('PIX')"
+                    >
+
+                        Pagar
+
+                        <span
+                            class="valor-botao"
+                            id="botaoValorPix"
+                        >
+                            R$ 0,00
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     CARTÃO
+                ================================== -->
+
+                <div
+                    id="cartao"
+                    class="conteudo-pagamento hidden"
+                >
+
+                    <div class="titulo-metodo">
+
+                        <h3>
+                            Pagamento com cartão
+                        </h3>
+
+                        <p>
+                            Preencha os dados do cartão
+                            para continuar.
+                        </p>
+
+                    </div>
+
+
+                    <label
+                        class="label"
+                        for="num"
+                    >
+                        Número do cartão
+                    </label>
+
+
+                    <input
+                        class="input"
+                        id="num"
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="0000 0000 0000 0000"
+                        maxlength="19"
+                    >
+
+
+                    <label
+                        class="label"
+                        for="nomeCartao"
+                    >
+                        Nome no cartão
+                    </label>
+
+
+                    <input
+                        class="input"
+                        id="nomeCartao"
+                        type="text"
+                        placeholder="NOME COMPLETO"
+                    >
+
+
+                    <div class="row">
+
+                        <div>
+
+                            <label
+                                class="label"
+                                for="validadeCartao"
+                            >
+                                Validade
+                            </label>
+
+
+                            <input
+                                class="input"
+                                id="validadeCartao"
+                                type="text"
+                                inputmode="numeric"
+                                placeholder="MM/AA"
+                                maxlength="5"
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label
+                                class="label"
+                                for="cvvCartao"
+                            >
+                                CVV
+                            </label>
+
+
+                            <input
+                                class="input"
+                                id="cvvCartao"
+                                type="password"
+                                inputmode="numeric"
+                                placeholder="123"
+                                maxlength="3"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-pagar"
+                        type="button"
+                        onclick="validarCartao()"
+                    >
+
+                        Pagar
+
+                        <span
+                            class="valor-botao"
+                            id="botaoValorCartao"
+                        >
+                            R$ 0,00
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     BOLETO
+                ================================== -->
+
+                <div
+                    id="boleto"
+                    class="conteudo-pagamento hidden"
+                >
+
+                    <div class="titulo-metodo">
+
+                        <h3>
+                            Pagamento por boleto
+                        </h3>
+
+                        <p>
+                            Preencha os dados abaixo
+                            para gerar o boleto.
+                        </p>
+
+                    </div>
+
+
+                    <label
+                        class="label"
+                        for="cpf"
+                    >
+                        CPF
+                    </label>
+
+
+                    <input
+                        class="input"
+                        id="cpf"
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="000.000.000-00"
+                        maxlength="14"
+                    >
+
+
+                    <label
+                        class="label"
+                        for="nomeBoleto"
+                    >
+                        Nome completo
+                    </label>
+
+
+                    <input
+                        class="input"
+                        id="nomeBoleto"
+                        type="text"
+                        placeholder="Seu nome completo"
+                    >
+
+
+                    <label
+                        class="label"
+                        for="emailBoleto"
+                    >
+                        E-mail
+                    </label>
+
+
+                    <input
+                        class="input"
+                        id="emailBoleto"
+                        type="email"
+                        placeholder="seu@email.com"
+                    >
+
+
+                    <button
+                        class="btn-pagar"
+                        type="button"
+                        onclick="pagar('Boleto')"
+                    >
+
+                        Gerar boleto
+
+                        <span
+                            class="valor-botao"
+                            id="botaoValorBoleto"
+                        >
+                            R$ 0,00
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     SEGURANÇA
+                ================================== -->
+
+                <div class="checkout-seguranca">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <span>
+                        Ambiente de pagamento
+                        simulado e seguro.
+                    </span>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         MODAL - LOGIN NECESSÁRIO
+    ========================================== -->
+
+    <div
+        class="modal-login-overlay"
+        id="modalLogin"
+        hidden
+    >
+
+        <div
+            class="modal-login"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloModalLogin"
+        >
+
+            <!-- ÍCONE -->
+
+            <div class="modal-login-icone">
+
+                <i class="fa-solid fa-lock"></i>
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <h2 id="tituloModalLogin">
+                Login necessário
+            </h2>
+
+
+            <!-- TEXTO -->
+
+            <p>
+
+                Para finalizar sua compra,
+                você precisa entrar em uma conta.
+
+            </p>
+
+
+            <span class="modal-login-aviso">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Seu carrinho continuará salvo.
+
+            </span>
+
+
+            <!-- BOTÕES -->
+
+            <div class="modal-login-acoes">
+
+                <a
+                    href="carrinho.html"
+                    class="btn-modal-secundario"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Voltar ao carrinho
+
+                </a>
+
+
+                <a
+                    href="login.html"
+                    class="btn-modal-login"
+                    id="btnEntrarConta"
+                >
+
+                    <i class="fa-regular fa-user"></i>
+
+                    Entrar na conta
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+
+            <div class="footer-coluna">
+
+                <h2>
+                    SPAN GAMES
+                </h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    Navegação
+                </h3>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="produtos.html">
+                    Produtos
+                </a>
+
+                <a href="ofertas.html">
+                    Ofertas
+                </a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    ATENDIMENTO
+                </h3>
+
+                <a href="ajuda.html#central-ajuda">
+                    Central de ajuda
+                </a>
+
+                <a href="ajuda.html#contato">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games —
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="js/header.js"></script>
+
+    <script src="js/span.js"></script>
+
+
+</body>
+
+</html>

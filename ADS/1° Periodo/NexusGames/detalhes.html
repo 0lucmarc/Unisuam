@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Detalhes do Produto | SPAN Games</title>
+
+
+    <!-- =========================================
+         ÍCONES
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================
+         CSS
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/detalhes.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/acessibilidade.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+
+    <!-- =========================================
+         PÁGINA DO PRODUTO
+    ========================================== -->
+
+    <main class="pagina-detalhes">
+
+
+        <!-- =====================================
+             CAMINHO
+        ====================================== -->
+
+        <nav class="produto-caminho">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <a href="produtos.html">
+                Produtos
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span id="nomeCaminho">
+                Produto
+            </span>
+
+        </nav>
+
+
+
+        <!-- =====================================
+             PRODUTO
+        ====================================== -->
+
+        <section class="produto-detalhes">
+
+
+            <!-- =================================
+                 IMAGENS
+            ================================== -->
+
+            <div class="produto-galeria">
+
+
+                <!-- MINIATURAS -->
+
+                <div
+                    class="produto-miniaturas"
+                    id="produtoMiniaturas"
+                >
+
+                    <button
+                        type="button"
+                        class="miniatura ativa"
+                    >
+
+                        <img
+                            id="miniaturaPrincipal"
+                            src=""
+                            alt="Miniatura do produto"
+                        >
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- IMAGEM PRINCIPAL -->
+
+                <div class="produto-imagem-principal">
+
+                    <img
+                        id="imagemProduto"
+                        src=""
+                        alt="Produto"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 INFORMAÇÕES
+            ================================== -->
+
+            <div class="produto-informacoes">
+
+
+                <!-- CATEGORIA -->
+
+                <span
+                    class="produto-categoria"
+                    id="categoriaProduto"
+                >
+                    Categoria
+                </span>
+
+
+
+                <!-- NOME -->
+
+                <h1 id="nomeProduto">
+                    Carregando produto...
+                </h1>
+
+
+
+                <!-- AVALIAÇÃO -->
+
+                <div class="produto-avaliacao">
+
+                    <span class="estrelas">
+                        ★★★★★
+                    </span>
+
+                    <span>
+                        (0 avaliações)
+                    </span>
+
+                </div>
+
+
+
+                <!-- DESCRIÇÃO CURTA -->
+
+                <p
+                    class="produto-resumo"
+                    id="resumoProduto"
+                >
+                    Confira todos os detalhes deste produto.
+                </p>
+
+
+
+                <!-- LINHA -->
+
+                <div class="produto-divisor"></div>
+
+
+
+                <!-- PREÇO -->
+
+                <div class="produto-precos">
+
+                    <span
+                        class="preco-antigo-detalhes"
+                        id="precoAntigo"
+                    ></span>
+
+                    <strong
+                        class="preco-atual-detalhes"
+                        id="precoProduto"
+                    >
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PAGAMENTO -->
+
+                <p class="produto-pagamento">
+
+                    <i class="fa-brands fa-pix"></i>
+
+                    Pagamento via PIX, cartão ou boleto
+
+                </p>
+
+
+
+                <!-- ESTOQUE -->
+
+                <div class="produto-estoque">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <div>
+
+                        <strong>
+                            Em estoque
+                        </strong>
+
+                        <span id="estoqueProduto">
+                            0 unidades disponíveis
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FRETE -->
+
+                <div class="produto-entrega">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <div>
+
+                        <strong>
+                            Frete grátis
+                        </strong>
+
+                        <span>
+                            Consulte as condições de entrega
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     QUANTIDADE
+                ================================== -->
+
+                <div class="produto-quantidade">
+
+                    <span>
+                        Quantidade
+                    </span>
+
+
+                    <div class="controle-quantidade">
+
+                        <button
+                            type="button"
+                            id="diminuirQuantidadeProduto"
+                            aria-label="Diminuir quantidade"
+                        >
+                            −
+                        </button>
+
+
+                        <span id="quantidadeProduto">
+                            1
+                        </span>
+
+
+                        <button
+                            type="button"
+                            id="aumentarQuantidadeProduto"
+                            aria-label="Aumentar quantidade"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     BOTÕES
+                ================================== -->
+
+                <div class="produto-acoes">
+
+
+                    <!-- COMPRAR AGORA -->
+
+                    <button
+                        type="button"
+                        class="btn-comprar-agora"
+                        id="comprarAgora"
+                    >
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        Comprar agora
+
+                    </button>
+
+
+
+                    <!-- ADICIONAR AO CARRINHO -->
+
+                    <button
+                        type="button"
+                        class="btn-adicionar-detalhes"
+                        id="adicionarCarrinho"
+                    >
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar ao carrinho
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- COMPRA SEGURA -->
+
+                <div class="produto-seguranca">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Compra segura na SPAN Games
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             DESCRIÇÃO
+        ========================================== -->
+
+        <section class="produto-descricao">
+
+            <h2>
+                Sobre o produto
+            </h2>
+
+
+            <p id="descricaoProduto">
+                Carregando descrição...
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             INFORMAÇÕES DO PRODUTO
+        ========================================== -->
+
+        <section class="produto-especificacoes">
+
+            <h2>
+                Informações do produto
+            </h2>
+
+
+            <div class="especificacoes-grid">
+
+
+                <div class="especificacao">
+
+                    <span>
+                        Categoria
+                    </span>
+
+                    <strong id="categoriaInformacao">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="especificacao">
+
+                    <span>
+                        Estoque
+                    </span>
+
+                    <strong id="estoqueInformacao">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="especificacao">
+
+                    <span>
+                        Código do produto
+                    </span>
+
+                    <strong id="codigoProduto">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="especificacao">
+
+                    <span>
+                        Vendido por
+                    </span>
+
+                    <strong>
+                        SPAN Games
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PRODUTOS RELACIONADOS
+        ========================================== -->
+
+        <section class="produtos-relacionados">
+
+
+            <div class="relacionados-cabecalho">
+
+                <div>
+
+                    <h2>
+                        Produtos relacionados
+                    </h2>
+
+                    <p>
+                        Você também pode gostar destes produtos.
+                    </p>
+
+                </div>
+
+
+                <a href="produtos.html">
+                    Ver todos
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+
+            <!-- JS PREENCHE AQUI -->
+
+            <div
+                class="relacionados-grid"
+                id="produtosRelacionados"
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-coluna">
+
+                <h2>SPAN GAMES</h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="ofertas.html">Ofertas</a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="ajuda.html">Central de ajuda</a>
+                <a href="ajuda.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+
+    <!-- HEADER -->
+
+    <script src="js/header.js"></script>
+
+
+    <!-- BANCO DE PRODUTOS -->
+
+    <script src="js/dadosprodutos.js"></script>
+
+
+    <!-- CARRINHO -->
+
+    <script src="js/carrinho.js"></script>
+
+
+    <!-- DETALHES -->
+
+    <script src="js/detalhes.js"></script>
+
+
+</body>
+
+</html>

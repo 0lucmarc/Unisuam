@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPAN Games</title>
+
+    <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="stylesheet" href="css/acessibilidade.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+
+    <!-- BANNER PRINCIPAL -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <span class="subtitulo">EQUIPAMENTOS GAMER</span>
+
+                <h1>DOMINE O JOGO</h1>
+
+                <p>
+                    Equipamentos para elevar seu setup ao próximo nível.
+                </p>
+
+                <a href="produtos.html" class="botao">
+                    VER PRODUTOS
+                </a>
+
+            </div>
+
+
+            <div class="hero-imagem">
+
+                <!-- Depois colocamos a imagem do headset -->
+                <img src="assets/imagens/Fone razer.png" alt="Headset Gamer">
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORIAS -->
+        <section class="categorias">
+
+            <div class="titulo-secao">
+                <h2>CATEGORIAS</h2>
+
+            </div>
+
+            <div id="listaCategorias" class="categorias-grid">
+                <!-- Os cards serão inseridos aqui pelo JavaScript -->
+            </div>
+
+        </section>
+
+
+        <section class="produtos-destaque produtos">
+
+            <div class="titulo-produtos titulo-secao">
+                <h2>PRODUTOS EM DESTAQUE</h2>
+                <a href="produtos.html">Ver produtos</a>
+            </div>
+
+            <div class="carrossel">
+
+                <button class="btn-carrossel" id="anterior">‹</button>
+
+                <div class="lista-produtos" id="listaProdutos">
+                    <!-- Os produtos serão colocados pelo JavaScript -->
+                </div>
+
+                <button class="btn-carrossel" id="proximo">›</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-coluna">
+
+                <h2>SPAN GAMES</h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="ofertas.html">Ofertas</a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="ajuda.html">Central de ajuda</a>
+                <a href="ajuda.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/header.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/produtos.js"></script>
+
+</body>
+
+</html>

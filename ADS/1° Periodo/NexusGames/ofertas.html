@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- CONFIGURAÇÕES -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ofertas | SPAN Games</title>
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS ACESSIBILIDADE -->
+    <link rel="stylesheet" href="css/acessibilidade.css">
+
+    <!-- CSS OFERTAS -->
+    <link rel="stylesheet" href="css/ofertas.css">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER COMPARTILHADO
+    ====================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <main class="pagina-ofertas" id="ofertas">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="ofertas-introducao">
+
+            <h1>OFERTAS ESPECIAIS</h1>
+
+            <p>
+                Aproveite as melhores ofertas
+                para elevar o seu setup.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             BANNER PROMOCIONAL
+        ================================== -->
+
+        <section class="banner-ofertas">
+
+            <div class="banner-conteudo">
+
+                <span class="banner-etiqueta">
+                    OFERTA POR TEMPO LIMITADO
+                </span>
+
+                <h2>ATÉ 40% OFF</h2>
+
+                <p>
+                    Em produtos selecionados para
+                    deixar seu setup ainda mais insano.
+                </p>
+
+                <a
+                    href="#lista-ofertas"
+                    class="btn-ver-ofertas"
+                >
+                    VER OFERTA
+                </a>
+
+            </div>
+
+
+            <!-- IMAGEM DO BANNER -->
+
+            <div class="banner-imagem">
+
+                <i class="fa-solid fa-desktop"
+                   aria-hidden="true"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PRODUTOS EM OFERTA
+        ================================== -->
+
+        <section
+            class="secao-produtos-ofertas"
+            id="lista-ofertas"
+        >
+
+            <div
+                class="grid-ofertas"
+                id="gridOfertas"
+            >
+                <!--
+                    Produtos inseridos
+                    automaticamente pelo ofertas.js
+                -->
+            </div>
+
+
+            <!-- MENSAGEM SEM OFERTAS -->
+
+            <p
+                class="mensagem-sem-ofertas"
+                id="mensagemSemOfertas"
+                hidden
+            >
+                Nenhum produto em oferta no momento.
+            </p>
+
+        </section>
+
+    </main>
+
+ <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+
+            <div class="footer-coluna">
+
+                <h2>
+                    SPAN GAMES
+                </h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    NAVEGAÇÃO
+                </h3>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="produtos.html">
+                    Produtos
+                </a>
+
+                <a href="ofertas.html">
+                    Ofertas
+                </a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>
+                    ATENDIMENTO
+                </h3>
+
+                <a href="ajuda.html">
+                    Central de ajuda
+                </a>
+
+                <a href="ajuda.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- =====================================
+         SCRIPTS
+    ====================================== -->
+
+    <!-- HEADER -->
+    <script src="js/header.js"></script>
+
+    <!-- DADOS DOS PRODUTOS -->
+<script src="js/dadosprodutos.js"></script>
+
+    <!-- CARRINHO -->
+<script src="js/carrinho.js"></script>
+    
+    <!-- OFERTAS -->
+    <script src="js/ofertas.js"></script>
+
+
+</body>
+</html>

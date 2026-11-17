@@ -1,0 +1,1016 @@
+/* =========================================
+   SPAN GAMES
+   CENTRAL DE AJUDA + CONTATO
+========================================= */
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.pagina-ajuda {
+    width: 100%;
+    min-height: 100vh;
+    padding: 45px 20px 70px;
+}
+
+.central-ajuda,
+.secao-contato {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo-ajuda {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.titulo-ajuda h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.titulo-ajuda p {
+    color: #9b9ba8;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   PESQUISA
+========================================= */
+
+.pesquisa-ajuda {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 45px;
+}
+
+.pesquisa-ajuda input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 18px 0 48px;
+
+    background-color: #151620;
+    color: #ffffff;
+
+    border: 1px solid #292a38;
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 0.85rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background-color 0.2s;
+}
+
+.pesquisa-ajuda input::placeholder {
+    color: #777785;
+}
+
+.pesquisa-ajuda input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.icone-pesquisa {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8b5cf6;
+    font-size: 1.35rem;
+
+    pointer-events: none;
+}
+
+
+/* Remove o X padrão do campo search */
+
+.pesquisa-ajuda input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.faq {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 1.15rem;
+    text-align: center;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   ITEM FAQ
+========================================= */
+
+.lista-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    overflow: hidden;
+
+    background-color: #151620;
+
+    border: 1px solid #242532;
+    border-radius: 9px;
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.faq-item:hover {
+    border-color: #39394c;
+}
+
+.faq-item.ativo {
+    border-color: rgba(139, 92, 246, 0.55);
+}
+
+
+/* =========================================
+   PERGUNTA
+========================================= */
+
+.faq-pergunta {
+    width: 100%;
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    background: transparent;
+    border: none;
+
+    color: #eeeeF5;
+
+    font-family: inherit;
+    font-size: 0.86rem;
+    font-weight: 500;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.faq-pergunta:hover {
+    color: #ffffff;
+}
+
+.faq-icone {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9b72ff;
+
+    font-size: 1.35rem;
+    font-weight: 400;
+
+    transition: transform 0.25s ease;
+}
+
+.faq-item.ativo .faq-icone {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   RESPOSTA
+========================================= */
+
+.faq-resposta {
+    display: none;
+
+    padding: 0 20px 18px;
+
+    color: #9d9daa;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.faq-item.ativo .faq-resposta {
+    display: block;
+}
+
+
+/* =========================================
+   SEM RESULTADO
+========================================= */
+
+.faq-sem-resultado {
+    display: none;
+
+    margin-top: 25px;
+
+    color: #8d8d99;
+
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+.faq-sem-resultado.exibir {
+    display: block;
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.secao-contato {
+    margin-top: 80px;
+}
+
+
+/* =========================================
+   TÍTULO CONTATO
+========================================= */
+
+.titulo-contato {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-contato h2 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-size: 1.55rem;
+}
+
+.titulo-contato p {
+    color: #9696a3;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   GRID CONTATO
+========================================= */
+
+.conteudo-contato {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 0.8fr)
+        minmax(400px, 1.2fr);
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.fale-conosco,
+.area-formulario {
+    background-color: #151620;
+
+    border: 1px solid #242532;
+    border-radius: 10px;
+
+    padding: 28px;
+}
+
+.fale-conosco h3,
+.area-formulario h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   FALE CONOSCO
+========================================= */
+
+.descricao-contato {
+    margin-bottom: 25px;
+
+    color: #9696a3;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.lista-linkedin {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linkedin-contato {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 48px;
+
+    padding: 9px 12px;
+
+    background-color: #101119;
+
+    border: 1px solid #282936;
+    border-radius: 8px;
+
+    color: #e7e7ed;
+
+    font-size: 0.8rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.linkedin-contato:hover {
+    transform: translateX(3px);
+
+    background-color: #181824;
+
+    border-color: #8b5cf6;
+}
+
+
+/* =========================================
+   ÍCONE LINKEDIN
+========================================= */
+
+.linkedin-icone {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #8b5cf6;
+
+    border-radius: 6px;
+
+    color: #ffffff;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo-contato {
+    position: relative;
+}
+
+.campo-contato input,
+.campo-contato textarea {
+    width: 100%;
+
+    background-color: transparent;
+
+    border: 1px solid #39394b;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.8rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.campo-contato input {
+    height: 42px;
+
+    padding: 0 12px;
+}
+
+.campo-contato textarea {
+    min-height: 120px;
+
+    padding: 13px 12px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   FOCO
+========================================= */
+
+.campo-contato input:focus,
+.campo-contato textarea:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 2px rgba(139, 92, 246, 0.12);
+}
+
+
+/* =========================================
+   LABEL FLUTUANTE
+========================================= */
+
+.campo-contato label {
+    position: absolute;
+
+    left: 12px;
+    top: 21px;
+
+    transform: translateY(-50%);
+
+    padding: 0 4px;
+
+    background-color: transparent;
+
+    color: #8d8d9a;
+
+    font-size: 0.78rem;
+
+    pointer-events: none;
+
+    transition:
+        top 0.2s,
+        font-size 0.2s,
+        color 0.2s,
+        background-color 0.2s;
+
+    z-index: 2;
+}
+
+
+/* Label do textarea começa no topo */
+
+.campo-mensagem label {
+    top: 21px;
+}
+
+
+/* Campo selecionado ou preenchido */
+
+.campo-contato input:focus + label,
+.campo-contato textarea:focus + label,
+.campo-contato.campo-preenchido label {
+    top: 0;
+
+    left: 10px;
+
+    padding: 0 7px;
+
+    background-color: #151620;
+
+    color: #9b72ff;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   ERROS
+========================================= */
+
+.erro-contato {
+    display: none;
+
+    margin-top: 5px;
+
+    color: #ff6b6b;
+
+    font-size: 0.68rem;
+}
+
+.erro-contato.exibir {
+    display: block;
+}
+
+.campo-contato.erro input,
+.campo-contato.erro textarea {
+    border-color: #ff6b6b;
+}
+
+
+/* =========================================
+   BOTÃO ENVIAR
+========================================= */
+
+.botao-enviar {
+    width: 180px;
+    height: 40px;
+
+    align-self: center;
+
+    margin-top: 3px;
+
+    background-color: #8b5cf6;
+
+    border: none;
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+.botao-enviar:hover {
+    background-color: #9d69ff;
+
+    transform: translateY(-1px);
+}
+
+.botao-enviar:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   MENSAGEM DE SUCESSO
+========================================= */
+
+.mensagem-enviada {
+    display: none;
+
+    padding: 10px 12px;
+
+    background-color: rgba(74, 222, 128, 0.07);
+
+    border: 1px solid rgba(74, 222, 128, 0.45);
+    border-radius: 7px;
+
+    color: #4ade80;
+
+    font-size: 0.72rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.mensagem-enviada.exibir {
+    display: block;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-ajuda {
+    width: 100%;
+
+    background-color: #0d0e15;
+
+    border-top: 1px solid #20212b;
+}
+
+.footer-conteudo {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 40px 30px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-marca h3 {
+    margin-bottom: 8px;
+
+    color: #8b5cf6;
+
+    font-size: 1.05rem;
+}
+
+.footer-marca p {
+    color: #858591;
+
+    font-size: 0.75rem;
+}
+
+.footer-coluna {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.footer-coluna h4 {
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.footer-coluna a {
+    width: fit-content;
+
+    color: #858591;
+
+    font-size: 0.74rem;
+
+    text-decoration: none;
+
+    transition: color 0.2s;
+}
+
+.footer-coluna a:hover {
+    color: #9b72ff;
+}
+
+.footer-final {
+    padding: 16px 20px;
+
+    border-top: 1px solid #20212b;
+
+    color: #686873;
+
+    font-size: 0.68rem;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+body.tema-claro .titulo-ajuda h1,
+body.tema-claro .faq h2,
+body.tema-claro .titulo-contato h2,
+body.tema-claro .fale-conosco h3,
+body.tema-claro .area-formulario h3 {
+    color: #18181b;
+}
+
+body.tema-claro .titulo-ajuda p,
+body.tema-claro .titulo-contato p,
+body.tema-claro .descricao-contato {
+    color: #66666f;
+}
+
+
+/* PESQUISA */
+
+body.tema-claro .pesquisa-ajuda input {
+    background-color: #ffffff;
+
+    border-color: #d9d9df;
+
+    color: #222222;
+}
+
+body.tema-claro .pesquisa-ajuda input::placeholder {
+    color: #888891;
+}
+
+body.tema-claro .pesquisa-ajuda input:focus {
+    border-color: #7c3aed;
+}
+
+
+/* FAQ */
+
+body.tema-claro .faq-item {
+    background-color: #ffffff;
+
+    border-color: #ddddE4;
+}
+
+body.tema-claro .faq-item:hover {
+    border-color: #c5c5ce;
+}
+
+body.tema-claro .faq-item.ativo {
+    border-color: #8b5cf6;
+}
+
+body.tema-claro .faq-pergunta {
+    color: #252529;
+}
+
+body.tema-claro .faq-resposta {
+    color: #62626b;
+}
+
+body.tema-claro .faq-sem-resultado {
+    color: #686870;
+}
+
+
+/* CARDS CONTATO */
+
+body.tema-claro .fale-conosco,
+body.tema-claro .area-formulario {
+    background-color: #ffffff;
+
+    border-color: #ddddE4;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* LINKEDIN */
+
+body.tema-claro .linkedin-contato {
+    background-color: #f7f7f9;
+
+    border-color: #dedee5;
+
+    color: #252529;
+}
+
+body.tema-claro .linkedin-contato:hover {
+    background-color: #f1edff;
+
+    border-color: #8b5cf6;
+}
+
+
+/* FORMULÁRIO */
+
+body.tema-claro .campo-contato input,
+body.tema-claro .campo-contato textarea {
+    background-color: transparent;
+
+    border-color: #cfcfd7;
+
+    color: #222222;
+}
+
+body.tema-claro .campo-contato input:focus,
+body.tema-claro .campo-contato textarea:focus {
+    border-color: #7c3aed;
+}
+
+body.tema-claro .campo-contato label {
+    color: #6d6d76;
+}
+
+body.tema-claro .campo-contato input:focus + label,
+body.tema-claro .campo-contato textarea:focus + label,
+body.tema-claro .campo-contato.campo-preenchido label {
+    background-color: #ffffff;
+
+    color: #7c3aed;
+}
+
+
+/* FOOTER */
+
+body.tema-claro .footer-ajuda {
+    background-color: #f5f5f7;
+
+    border-color: #ddddE4;
+}
+
+body.tema-claro .footer-coluna h4 {
+    color: #222222;
+}
+
+body.tema-claro .footer-marca p,
+body.tema-claro .footer-coluna a {
+    color: #66666f;
+}
+
+body.tema-claro .footer-coluna a:hover {
+    color: #7c3aed;
+}
+
+body.tema-claro .footer-final {
+    border-color: #ddddE4;
+
+    color: #74747c;
+}
+
+
+/* =========================================
+   AUTOFILL - TEMA ESCURO
+========================================= */
+
+body.tema-escuro .campo-contato input:-webkit-autofill,
+body.tema-escuro .campo-contato input:-webkit-autofill:hover,
+body.tema-escuro .campo-contato input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+
+    -webkit-box-shadow:
+        0 0 0 1000px #151620 inset;
+
+    box-shadow:
+        0 0 0 1000px #151620 inset;
+
+    caret-color: #ffffff;
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* =========================================
+   AUTOFILL - TEMA CLARO
+========================================= */
+
+body.tema-claro .campo-contato input:-webkit-autofill,
+body.tema-claro .campo-contato input:-webkit-autofill:hover,
+body.tema-claro .campo-contato input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #222222;
+
+    -webkit-box-shadow:
+        0 0 0 1000px #ffffff inset;
+
+    box-shadow:
+        0 0 0 1000px #ffffff inset;
+
+    caret-color: #222222;
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 800px) {
+
+    .pagina-ajuda {
+        padding:
+            35px 18px
+            55px;
+    }
+
+    .conteudo-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .fale-conosco,
+    .area-formulario {
+        padding: 24px;
+    }
+
+    .secao-contato {
+        margin-top: 60px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-marca {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .pagina-ajuda {
+        padding:
+            28px 14px
+            45px;
+    }
+
+    .titulo-ajuda h1 {
+        font-size: 1.6rem;
+    }
+
+    .titulo-contato h2 {
+        font-size: 1.3rem;
+    }
+
+    .pesquisa-ajuda {
+        margin-bottom: 35px;
+    }
+
+    .faq-pergunta {
+        padding: 14px 15px;
+
+        font-size: 0.78rem;
+    }
+
+    .faq-resposta {
+        padding:
+            0 15px
+            16px;
+    }
+
+    .fale-conosco,
+    .area-formulario {
+        padding: 20px;
+    }
+
+    .botao-enviar {
+        width: 100%;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+
+        padding:
+            35px 22px;
+    }
+
+    .footer-marca {
+        grid-column: auto;
+    }
+}

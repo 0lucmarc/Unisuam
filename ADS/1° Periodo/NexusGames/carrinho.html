@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | SPAN Games</title>
+
+    <!-- ÍCONES -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="header"></div>
+
+
+    <!-- =========================================
+         PÁGINA DO CARRINHO
+    ========================================== -->
+
+    <main class="pagina-carrinho">
+
+        <h1>Meu Carrinho</h1>
+
+
+        <div class="conteudo-carrinho">
+
+
+            <!-- =================================
+                 PRODUTOS
+            ================================== -->
+
+            <section class="itens-carrinho">
+
+                <div id="listaCarrinho"></div>
+
+            </section>
+
+
+            <!-- =================================
+                 RESUMO DA COMPRA
+            ================================== -->
+
+            <aside class="resumo-carrinho">
+
+                <h2>Resumo da compra</h2>
+
+
+                <!-- SUBTOTAL -->
+
+                <div class="linha-resumo">
+
+                    <span>Subtotal</span>
+
+                    <strong id="subtotal">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <!-- FRETE -->
+
+                <div class="linha-resumo">
+
+                    <span>Frete</span>
+
+                    <strong>
+                        Grátis
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- TOTAL -->
+
+                <div class="total-carrinho">
+
+                    <span>Total</span>
+
+                    <strong id="total">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <!-- FINALIZAR COMPRA -->
+
+                <button
+                    type="button"
+                    class="btn-finalizar"
+                    id="finalizarCompra"
+                >
+                    Finalizar compra
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-coluna">
+
+                <h2>SPAN GAMES</h2>
+
+                <p>
+                    Tudo para elevar o seu game.
+                </p>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="#ofertas">Ofertas</a>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h3>ATENDIMENTO</h3>
+
+                <a href="ajuda.html">Central de ajuda</a>
+                <a href="ajuda.html">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 SPAN Games — Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+    
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="js/header.js"></script>
+
+    <script src="js/carrinho.js"></script>
+
+    <script src="js/carrinhopagina.js"></script>
+
+</body>
+
+</html>
